@@ -4,7 +4,7 @@ import style from './style.module.css';
 
 const MainHeader = () => {
   return (
-    <header className={`flex_space_between ${style.main_header}`}>
+    <header className={`container flex_space_between ${style.main_header}`}>
         <Logo/>
         <ToggleMobileMenu/>
     </header>
