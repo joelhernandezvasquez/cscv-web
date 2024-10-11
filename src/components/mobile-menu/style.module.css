@@ -18,3 +18,6 @@
     width:100%;
     color:var(--neutral_clr);
 }
+.rotate_btn_icon svg{
+    transform: rotate(90deg);
+}

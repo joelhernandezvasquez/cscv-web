@@ -3,12 +3,10 @@ import Link from 'next/link';
 import { menuNavigation } from '@/constants/menuNavigation';
 import { MobileDropdownMenu } from './dropdown-menu/MobileDropdownMenu';
 import style from './style.module.css';
+import { titleHeadline } from '@/app/fonts/plugin-font';
 /*
- 1 - HTML(DONE)
- 2 - Organize HTML into constant and components(Done)
- 3 - JS
- 4- Font type
- 5 - CSS
+ 5 - CSS (working on it)
+ 6 - need to check if this need to be a client component the whole tree
 */
 
 
@@ -23,7 +21,9 @@ const MobileMenu = () => {
                 <MobileDropdownMenu menuItem={menuItem}/>
                )
               :
-              <li key={menuItem.id} className={style.mobile_menu_item}><Link href={menuItem.link!}>{menuItem.item}</Link></li>
+              <li key={menuItem.id} className={`${style.mobile_menu_item} ${titleHeadline.className}`}>
+                <Link href={menuItem.link!}>{menuItem.item}</Link>
+              </li>
              }
              </>  
         })}
