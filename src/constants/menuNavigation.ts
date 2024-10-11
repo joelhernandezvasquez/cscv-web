@@ -1,6 +1,13 @@
 import { MenuNavigation } from "@/interfaces/navigation";
 
 export const menuNavigation:MenuNavigation[] =  [
+    
+    {
+     id:'00',
+     item:'Home',
+     hasSubmenu:false,
+     link:'/'
+    },
     {
         id:'01',
         item:'Quienes Somos',

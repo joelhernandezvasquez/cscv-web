@@ -2,13 +2,14 @@
 import Link from 'next/link';
 import { menuNavigation } from '@/constants/menuNavigation';
 import { MobileDropdownMenu } from './dropdown-menu/MobileDropdownMenu';
-import style from './style.module.css';
 import { titleHeadline } from '@/app/fonts/plugin-font';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { CiYoutube } from 'react-icons/ci';
+import { FaXTwitter } from 'react-icons/fa6';
+import style from './style.module.css';
 /*
- 5 - CSS (working on it)
- 6 - need to check if this need to be a client component the whole tree
+ TODO: need to check if this need to be a client component the whole tree
 */
-
 
 const MobileMenu = () => {
   return (
@@ -28,6 +29,35 @@ const MobileMenu = () => {
              </>  
         })}
       </ul>
+      <footer>
+        <nav>
+          <ul className={style.nav_footer_social_icons}>
+            <li>
+              <Link href={'/'}>
+                <FaFacebookF color={'white'} size={25} />
+              </Link>
+            </li>
+
+            <li>
+              <Link href={'/'}>
+                 <CiYoutube color={'white'} size={25} />
+              </Link>
+            </li>
+
+            <li>
+              <Link href={'/'}>
+                 <FaXTwitter color={'white'} size={25} />
+              </Link>
+            </li>
+
+            <li>
+              <Link href={'/'}>
+                  <FaInstagram color={'white'} size={25} />
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </footer>
     </nav>
   )
 }
