@@ -6,7 +6,6 @@ import { IoMdClose } from "react-icons/io";
 
 const ToggleMobileMenu = () => {
   const {isToggle,handleToggle} = useToggle();
-  
   return (
     <>
      <button onClick={handleToggle}>
