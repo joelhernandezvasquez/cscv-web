@@ -2,6 +2,11 @@
 :root {
   /* --max-width: 1100px;
   --border-radius: 12px; */
+  --main_bg:#F7FAFC;
+  --neutral_clr:#FFFFFF;
+  /* #F4F4F4 */
+  --spacing:1rem;
+
 }
 
 
@@ -19,6 +24,7 @@ html, body {
 body {
  line-height: 1.5;
  font-family: "Poppins", sans-serif;
+ background:var(--main_bg);
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -70,7 +76,6 @@ button{
 
 .container{
   padding:0 var(--spacing);
-  background:var(--background_clr);
 }
 
 .flex_center{
