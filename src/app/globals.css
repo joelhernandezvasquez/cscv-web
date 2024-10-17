@@ -96,7 +96,7 @@ button{
 .btn_cta{
   background:#C41E02;
   color:var(--neutral_clr);
-  font-size: 1rem;
+  font-size: 1.125rem;
   padding:.5rem 1.5rem;
   width: fit-content;
   border-radius: .5rem;

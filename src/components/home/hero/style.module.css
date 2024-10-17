@@ -1,6 +1,6 @@
 
 .hero_container{
-    height: 500px;
+    height: 550px;
     position:relative;
 }
 .hero_img_container{
@@ -37,5 +37,5 @@
 .hero_sub_text{
     text-align: center;
     line-height: 1.8;
-    font-size: 1rem;
+    font-size: 1.125rem;
 }
