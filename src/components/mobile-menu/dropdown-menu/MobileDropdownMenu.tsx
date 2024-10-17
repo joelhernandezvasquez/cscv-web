@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { MenuNavigation } from '@/interfaces/navigation';
 import { GoChevronRight } from 'react-icons/go';
-import style from '../style.module.css';
 import useToggle from '@/hooks/useToggle';
-import { titleHeadline } from '@/app/fonts/plugin-font';
+import style from '../style.module.css';
+import { titleHeadline } from '@/config/font.plugin';
 
 interface Props{
  menuItem:MenuNavigation
