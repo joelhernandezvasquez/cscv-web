@@ -10,7 +10,6 @@
 }
 
 
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -92,6 +91,15 @@ button{
   background:var(--primary_white_clr);
   border-radius: .75rem;
   padding:1rem;
+}
+
+.btn_cta{
+  background:#C41E02;
+  color:var(--neutral_clr);
+  font-size: 1rem;
+  padding:.5rem 1.5rem;
+  width: fit-content;
+  border-radius: .5rem;
 }
 
 

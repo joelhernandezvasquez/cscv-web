@@ -2,11 +2,11 @@
 import Link from 'next/link';
 import { menuNavigation } from '@/constants/menuNavigation';
 import { MobileDropdownMenu } from './dropdown-menu/MobileDropdownMenu';
-import { titleHeadline } from '@/app/fonts/plugin-font';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { CiYoutube } from 'react-icons/ci';
 import { FaXTwitter } from 'react-icons/fa6';
 import style from './style.module.css';
+import { titleHeadline } from '@/config/font.plugin';
 /*
  TODO: need to check if this need to be a client component the whole tree
 */
