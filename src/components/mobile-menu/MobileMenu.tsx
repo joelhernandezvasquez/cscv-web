@@ -5,8 +5,8 @@ import { MobileDropdownMenu } from './dropdown-menu/MobileDropdownMenu';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { CiYoutube } from 'react-icons/ci';
 import { FaXTwitter } from 'react-icons/fa6';
-import style from './style.module.css';
 import { titleHeadline } from '@/config/font.plugin';
+import style from './style.module.css';
 /*
  TODO: need to check if this need to be a client component the whole tree
 */

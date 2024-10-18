@@ -10,7 +10,7 @@ const ToggleMobileMenu = () => {
   return (
     <>
      <button onClick={handleToggle}>
-      {!isToggle ? <RxHamburgerMenu size={30}/>:<IoMdClose size={30} />}
+      {!isToggle ? <RxHamburgerMenu color={'#C41E02'} size={30}/>:<IoMdClose color={'#C41E02'} size={30} />}
      </button>
 
       { isToggle && <MobileMenu/>}
