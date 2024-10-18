@@ -1,14 +1,12 @@
 
 :root {
-  /* --max-width: 1100px;
-  --border-radius: 12px; */
   --main_bg:#F7FAFC;
   --neutral_clr:#FFFFFF;
   /* #F4F4F4 */
+  --brand_red_clr:#C41E02;
   --spacing:1rem;
 
 }
-
 
 * {
   box-sizing: border-box;
@@ -72,7 +70,6 @@ button{
   outline:1px solid var(--primary_purple_clr);
 }
 
-
 .container{
   padding:0 var(--spacing);
 }
@@ -94,10 +91,10 @@ button{
 }
 
 .btn_cta{
-  background:#C41E02;
+  background:var(--brand_red_clr);
   color:var(--neutral_clr);
   font-size: 1.125rem;
-  padding:.5rem 1.5rem;
+  padding:.5rem 2rem;
   width: fit-content;
   border-radius: .5rem;
 }
