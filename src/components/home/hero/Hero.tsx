@@ -1,35 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
-
+import Link from 'next/link';
+import { BlocksRenderer} from '@strapi/blocks-react-renderer';
+import { getHomeInfo } from '@/actions/get-home-info';
 import { leadText, titleHeadline } from '@/config/font.plugin';
 import style from './style.module.css';
-import Link from 'next/link';
 
-export const Hero = () => {
+export const Hero = async () => {
+  const {title,description,image} = await getHomeInfo();
+ 
   return (
     <section className={style.hero_container}>
       <div className={style.hero_img_container}>
         <img
           width={100}
           height={100}
-          src={'/images/comteplacion.jpeg'}
+          src={image}
           alt=""
          />
       </div>
 
       <div className={style.hero_overlay}>
-       
+        
        <h1 className={`${titleHeadline.className} ${style.hero_main_headline}`}>
-         <span>Comunidad Siervos</span>
-         <span>De Cristo Vivo</span>
-         <span>Casa De La Anunciacion Brooklyn </span>
+         {title}
        </h1>
-       
-       <p className={`${leadText.className} ${style.hero_sub_text}`}>Una asociación católica que promueve la santificación personal y comparte el amor de Cristo. A través de la oración y la evangelización, vivimos en fe, respondiendo al llamado de predicar Su palabra.</p>
+
+       <div className={`${leadText.className} ${style.hero_sub_text}`}> 
+        <BlocksRenderer content={description}/>
+      </div>
       
       <Link href={'/'} className={`${'btn_cta'} ${titleHeadline.className}`}>Ver Actividades</Link>
-      
       </div>
-    
     </section>
   )
 }
+
+
