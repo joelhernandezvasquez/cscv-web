@@ -99,6 +99,10 @@ button{
   border-radius: .5rem;
 }
 
+.block{
+ padding:2.5rem var(--spacing);
+}
+
 
 
 

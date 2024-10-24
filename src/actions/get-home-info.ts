@@ -4,7 +4,7 @@ const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 
 export const getHomeInfo = async ():Promise<HomeInfo>=>{
   try{
-    const request = await fetch(`${STRAPI_HOST}/api/home?populate=cover`,{
+    const request = await fetch(`${STRAPI_HOST}/api/home?populate=*`,{
       headers:{
           Authorization:`Bearer ${STRAPI_TOKEN}`
       }
@@ -14,9 +14,11 @@ export const getHomeInfo = async ():Promise<HomeInfo>=>{
       throw new Error('error while getting home data from strapi');
     }
      const response =  await request.json();
-     const {title,description,cover} = response.data;
+     const {title,description,cover,about} = response.data;
+   
      const image = `${STRAPI_HOST}/${cover.url}`;
-     return {title,description,image};
+
+     return {title,description,image,about};
      
   }
   catch(error){

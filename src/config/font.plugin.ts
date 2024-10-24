@@ -9,3 +9,8 @@ export const leadText = Quicksand({
     subsets:['latin'],
     weight:['600']
 })
+
+export const regularText = Quicksand({
+    subsets:['latin'],
+    weight:['500']
+})
