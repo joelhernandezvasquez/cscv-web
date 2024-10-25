@@ -13,16 +13,7 @@
     align-items: center;
     justify-content: center;
 }
-/* .cover_image_overlay::after{
-   content:"";
-   position:absolute;
-   top:0;
-   left:0;
-   width:100%;
-   height:100%;
-   background:rgba(0,0,0,0.4);
-  border-radius: inherit;
-} */
+
 
 .cover_image{
     object-fit: cover;
@@ -36,7 +27,7 @@
 }
 
 .about_title{
-    color:#121926;
+    color:var(--black_text_clr);
     font-size: 1.75rem;
 }
 .about_text{

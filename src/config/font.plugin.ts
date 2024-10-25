@@ -1,4 +1,4 @@
-import {Quicksand} from 'next/font/google';
+import {Amatic_SC, Quicksand} from 'next/font/google';
 
 export const titleHeadline = Quicksand({
     subsets:['latin'],
@@ -13,4 +13,9 @@ export const leadText = Quicksand({
 export const regularText = Quicksand({
     subsets:['latin'],
     weight:['500']
+})
+
+export const subHeading = Amatic_SC({
+    subsets:['latin'],
+    weight:['700']
 })

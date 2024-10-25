@@ -4,6 +4,7 @@
   --neutral_clr:#FFFFFF;
   /* #F4F4F4 */
   --brand_red_clr:#C41E02;
+  --black_text_clr:#121926;
   --spacing:1rem;
 
 }
@@ -21,7 +22,7 @@ html, body {
 body {
  line-height: 1.5;
  font-family: "Poppins", sans-serif;
- background:var(--main_bg);
+ /* background:var(--main_bg); */
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -100,8 +101,18 @@ button{
 }
 
 .block{
- padding:2.5rem var(--spacing);
+ padding:2rem var(--spacing);
 }
+
+.overlay{
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,.5);
+  border-radius: inherit;
+ }
 
 
 
