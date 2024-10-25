@@ -33,7 +33,7 @@ export const AboutUs = async () => {
       <div className={`${regularText.className} ${style.about_text}`}>
         {/* <BlocksRenderer content={about.description} /> */}
         <p>La Comunidad Siervos de Cristo Vivo es una asociación de fieles cuyos miembros son laicos catolicos, que acogiendose al derecho que nuestra iglesia reconoce, forman una comunidad de evangelización.</p>
-        <p>Nace en los sentimientos del Sagrado Corazón de Jesús por el hombre, los cuales inspiraron al Reverendo P. Emiliano Tardif, M.S.C., a María Armenteros Malla y a Evaristo Guzmán Hilario, luego de ocho años es experiencia en el Amor de Dios y en la predicación, a fundar una comunidad que fuera contemplativa y evangalizadora, y cuyo trabajo tenga su centro y fortaleza en corazón de aquel que dice "Sin mi no pueden hacer nada" (Juan 15,5).</p>
+        <p>Nace en los sentimientos del Sagrado Corazón de Jesús por el hombre, los cuales inspiraron al Reverendo P. Emiliano Tardif, M.S.C., a María Armenteros Malla y a Evaristo Guzmán Hilario, luego de ocho años es experiencia en el Amor de Dios y en la predicación, a fundar una comunidad que fuera contemplativa y evangalizadora, y cuyo trabajo tenga su centro y fortaleza en corazón de aquel que dice Sin mi no pueden hacer nada (Juan 15,5).</p>
 
       </div>
 
