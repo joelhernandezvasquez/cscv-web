@@ -11,8 +11,8 @@ export default function Home() {
       <main className={styles.main}>
          <Hero/>
          <AboutUs/>
-         <WeeklyActivities/>
-         <EventList/>
+         <WeeklyActivities/> 
+         <EventList/> 
       </main>
     </div>
   );

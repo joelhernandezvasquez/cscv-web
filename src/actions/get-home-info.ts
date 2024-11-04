@@ -14,11 +14,10 @@ export const getHomeInfo = async ():Promise<HomeInfo>=>{
       throw new Error('error while getting home data from strapi');
     }
      const response =  await request.json();
-     const {title,description,cover,about,events} = response.data;
-   
+     const {title,description,cover,about,activities,events} = response.data;
      const image = `${STRAPI_HOST}/${cover.url}`;
 
-     return {title,description,image,about,events};
+     return {title,description,image,about,activities,events};
      
   }
   catch(error){
