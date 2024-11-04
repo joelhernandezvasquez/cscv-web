@@ -1,0 +1,44 @@
+
+.event_card{
+    border:1px solid #e3e8ef;
+    border-radius: .5rem;
+}
+
+.event_card_graphic{
+   border-radius: .5rem;
+    height:100%;
+    object-fit:cover;
+}
+
+.event_card_body{
+    display:flex;
+    flex-direction: column;
+    gap:.5rem;
+    padding:.5rem;
+    color:var(--black_text_clr);
+}
+
+.event_card_body_title{
+    font-size: 1.5rem;
+    color:var(--black_text_clr);
+}
+
+.event_card_body_description{
+    font-size: 1.3rem;
+    color:var(--black_text_clr);
+}
+
+.event_time_card_col{
+    display:flex;
+   flex-direction: column;
+}
+
+.event_location{
+    display:flex;
+    align-items: center;
+    gap:.2rem;
+}
+
+.event_card_body a{
+    margin:.5rem 0;
+}

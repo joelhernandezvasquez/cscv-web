@@ -5,6 +5,7 @@ export interface HomeInfo{
     title:string,
     description:React.ComponentProps<typeof BlocksRenderer>['content'],
     image:string,
-    about:Block
+    about:Block,
+    events:Block
 }
 
