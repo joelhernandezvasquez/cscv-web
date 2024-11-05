@@ -1,15 +1,17 @@
 import { ActivityCard } from "@/components/ui/activity-card/ActivityCard";
 import { subHeading, titleHeadline } from "@/config/font.plugin";
 import { getWeeklyActivities } from "@/actions/get-weekly-activities";
-import { getHomeInfo } from "@/actions/get-home-info";
 import { Title } from "@/components/ui/title/Title";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { Block } from "@/interfaces/block";
 import style from './style.module.css';
 
-export const WeeklyActivities = async () => {
+interface Props{
+  activities:Block
+}
 
-   const [homeInfo,activitiesList] = await Promise.all([getHomeInfo(),getWeeklyActivities()]);
-   const {activities} = homeInfo;
+export const WeeklyActivities = async ({activities}:Props) => {
+  const activitiesList = await getWeeklyActivities();
    
    if(activitiesList.length <=0) return;
    

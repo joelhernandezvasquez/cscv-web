@@ -1,13 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { BlocksRenderer} from '@strapi/blocks-react-renderer';
-import { getHomeInfo } from '@/actions/get-home-info';
 import { leadText, titleHeadline } from '@/config/font.plugin';
 import style from './style.module.css';
 
-export const Hero = async () => {
- const {title,description,image} = await getHomeInfo();
- 
+interface Props{
+  title:string,
+  description:React.ComponentProps<typeof BlocksRenderer>['content'],
+  image:string
+}
+
+export const Hero = ({title,description,image}:Props) => {
+
   return (
     <section className={style.hero_container}>
       <div className={style.hero_img_container}>

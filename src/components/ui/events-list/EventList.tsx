@@ -3,15 +3,17 @@ import { getEventList } from "@/actions/get-events";
 import { EventCard } from "../event-card/EventCard";
 import { Title } from "../title/Title";
 import { leadText} from "@/config/font.plugin";
-import { getHomeInfo } from "@/actions/get-home-info";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { FaCalendarAlt } from "react-icons/fa";
+import { Block } from "@/interfaces/block";
 import style from './style.module.css';
 
+interface Props{
+  events:Block
+}
 
-export const EventList = async () => {
-   const [homeInfo,eventList] = await Promise.all([getHomeInfo(),getEventList()]);
-   const {events} = homeInfo;
+export const EventList = async ({events}:Props) => {
+   const eventList = await getEventList();
 
   return (
     <section>

@@ -1,15 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { getHomeInfo } from "@/actions/get-home-info";
 import { Title } from "@/components/ui/title/Title";
 import { regularText} from "@/config/font.plugin";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { Block } from "@/interfaces/block";
 import style from "./style.module.css";
+interface Props{
+  about:Block,
+}
 
-
-export const AboutUs = async () => {
-  const { about } = await getHomeInfo();
-  
+export const AboutUs = ({about}:Props) => {
+ 
   return (
     <section className={`${"block"} ${style.about_container}`}>
       <div className={style.cover_image_overlay}>
