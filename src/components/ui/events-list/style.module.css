@@ -7,11 +7,6 @@
     gap:.5rem;
     background:var(--brand_red_clr);
     padding:1.5rem var(--spacing);
-
-}
-.event_title{
-    font-size: 1.75rem;
-    color:var(--neutral_clr);
 }
 .event_description{
     text-align: center;

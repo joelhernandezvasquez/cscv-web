@@ -18,13 +18,8 @@
     color:var(--black_text_clr);
 }
 
-.event_card_body_title{
-    font-size: 1.5rem;
-    color:var(--black_text_clr);
-}
-
 .event_card_body_description{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color:var(--black_text_clr);
 }
 

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { Title } from "../title/Title";
 import { Events } from "@/interfaces/events";
 import { leadText, titleHeadline } from "@/config/font.plugin";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
@@ -24,7 +25,7 @@ export const EventCard = ({event}:Props) => {
       </header>
       
         <div className={style.event_card_body}>
-          <h3 className={`${titleHeadline.className} ${style.event_card_body_title}`}>{name}</h3>
+          <Title title={name} color={'black'} size={'sm'}/>
           <p className={`${leadText.className} ${style.event_card_body_description}`}>{description}</p>
 
           <div className={`${style.event_time_card_col} ${leadText.className}`}>

@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { getHomeInfo } from "@/actions/get-home-info";
-import { regularText, titleHeadline } from "@/config/font.plugin";
+import { Title } from "@/components/ui/title/Title";
+import { regularText} from "@/config/font.plugin";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import style from "./style.module.css";
+
 
 export const AboutUs = async () => {
   const { about } = await getHomeInfo();
@@ -23,9 +25,7 @@ export const AboutUs = async () => {
           </iframe>
       </div>
 
-      <h2 className={`${titleHeadline.className} ${style.about_title}`}>
-        {about.title}
-      </h2>
+      <Title title={about.title} size={'md'} color={'black'}/>
 
       <div className={`${regularText.className} ${style.about_text}`}>
         <BlocksRenderer content={about.description} />
