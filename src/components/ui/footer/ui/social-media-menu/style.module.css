@@ -1,0 +1,15 @@
+.social_media_container{
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    padding:1rem 0;
+}
+
+.social_media_item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #4c4d51;
+    border-radius: 50%;
+    padding:.5rem;
+}

@@ -33,7 +33,7 @@ export const Hero = ({title,description,image}:Props) => {
         <BlocksRenderer content={description}/>
       </div>
       
-      <Link href={'/'} className={`${'btn_cta'} ${titleHeadline.className}`}>Ver Actividades</Link>
+      <Link href={'#event-list'} className={`${'btn_cta'} ${titleHeadline.className}`}>Ver Actividades</Link>
       </div>
     </section>
   )

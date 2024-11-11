@@ -9,7 +9,7 @@ export const getEventList = async():Promise<Events[]> =>{
             Authorization:`Bearer ${STRAPI_TOKEN}`
         }
       })
-        console.log(request);
+
       if(!request.ok){
         throw new Error('Error while getting event list');
       }
