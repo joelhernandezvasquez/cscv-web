@@ -7,6 +7,7 @@ export interface HomeInfo{
     image:string,
     about:Block,
     activities:Block,
-    events:Block
+    events:Block,
+    testimonies:Block
 }
 

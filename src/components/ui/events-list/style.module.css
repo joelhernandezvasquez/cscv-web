@@ -1,4 +1,7 @@
 
+.event_container{
+  padding-bottom: 2rem;
+}
 
 .event_header{
     display:flex;

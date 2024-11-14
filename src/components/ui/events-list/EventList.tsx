@@ -16,7 +16,7 @@ export const EventList = async ({events}:Props) => {
    const eventList = await getEventList();
 
   return (
-    <section id="event-list">
+    <section id="event-list" className={style.event_container}>
        <header className={style.event_header}>
          <FaCalendarAlt size={30} color="#FFF"/>
           <Title title={events.title} size={'md'} color={'white'}/>

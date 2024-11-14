@@ -69,7 +69,10 @@ p{
 .center_content{
   margin:0 auto;
 }
-
+.center_text{
+  text-align: center;
+  line-height: 1.7;
+}
 button{
   border:none;
   cursor: pointer;
@@ -126,6 +129,8 @@ button{
   background:rgba(0,0,0,.5);
   border-radius: inherit;
  }
+
+
 
 
 
