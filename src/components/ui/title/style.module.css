@@ -9,6 +9,9 @@
 .lg{
  font-size: 1.8rem;
 }
+.xl{
+    font-size: 2rem;
+}
 
 .black{
     color:var(--black_text_clr);

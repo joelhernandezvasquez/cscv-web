@@ -80,26 +80,28 @@ export const menuNavigation:MenuNavigation[] =  [
                 item:'Colaboradores',
                 link:'/'
             },
-            
-            
-            
-
         ]
     },
     {
         id:'03',
-        item:'Actividades',
+        item:'Eventos',
         link:'/',
         hasSubmenu:false
     },
     {
         id:'04',
-        item:'Multimedia',
+        item:'Actividades',
         link:'/',
         hasSubmenu:false
     },
     {
         id:'05',
+        item:'Multimedia',
+        link:'/',
+        hasSubmenu:false
+    },
+    {
+        id:'06',
         item:'Oracion',
         hasSubmenu:true,
         subItems:[
