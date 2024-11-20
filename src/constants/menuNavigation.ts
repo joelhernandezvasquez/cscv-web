@@ -57,26 +57,11 @@ export const menuNavigation:MenuNavigation[] =  [
             },
             {
                 id:'008',
-                item:'Asamblea De Los Jueves',
-                link:'/'
-            },
-            {
-                id:'009',
-                item:'Grupo De Oracion De Los Miercoles',
-                link:'/'
-            },
-            {
-                id:'00010',
                 item:'Ministerio De Los Jovenes',
                 link:'/'
             },
             {
-                id:'00011',
-                item:'Grupos De Hombres Nuevos',
-                link:'/'
-            },
-            {
-                id:'00012',
+                id:'009',
                 item:'Colaboradores',
                 link:'/'
             },
@@ -92,7 +77,29 @@ export const menuNavigation:MenuNavigation[] =  [
         id:'04',
         item:'Actividades',
         link:'/',
-        hasSubmenu:false
+        hasSubmenu:true,
+        subItems:[
+            {
+                id:'0010',
+                item:'Asamblea De Los Jueves',
+                link:'/'
+            },
+            {
+                id:'0011',
+                item:'Grupo De Oracion De Los Miercoles',
+                link:'/'
+            },
+            {
+                id:'0012',
+                item:'Adoracion al Santisimo Sacramento',
+                link:'/'
+            },
+            {
+                id:'0013',
+                item:'Grupo Juvenil The Chosen',
+                link:'/'
+            },
+        ]
     },
     {
         id:'05',
