@@ -9,6 +9,7 @@ export interface HomeInfo{
     activities:Block,
     events:Block,
     testimonies:Block,
-    ministerios:Block
+    ministerios:Block,
+    anuncios:Block
 }
 
