@@ -1,0 +1,6 @@
+.galleria_hero_image{
+    width:100%;
+    height: 250px;
+    border-radius: .5rem;
+    object-fit: cover;
+}

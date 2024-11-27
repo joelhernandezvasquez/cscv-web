@@ -1,0 +1,10 @@
+.galleria_container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:1rem;
+
+}
+.galleria_item{
+ object-fit: cover;
+ border-radius: 5px;
+}
