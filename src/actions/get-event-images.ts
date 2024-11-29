@@ -15,7 +15,6 @@ export const getEventImages = async():Promise<EventImage[]> => {
     }
 
     const response = await request.json();
-    console.log(response.data);
    
     return response.data.map((event:EventImage)=>{
       const imagesUrl  = event.image.map((element)=>{

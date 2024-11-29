@@ -1,0 +1,26 @@
+
+
+.card{
+ border-radius: 1rem;
+ border:1px solid #e3e8ef;
+ padding-bottom: 2rem;
+} 
+
+.cover_image{
+    width:100%;
+    object-fit: cover;
+    height: fit-content;
+}
+
+.body{
+    padding:.5rem 1rem;
+}
+
+.card_description{
+ margin-bottom:2rem;
+}
+.conocer_btn{
+    margin:.5rem 0;
+    padding:13px 29px;
+    border-radius: 2rem;
+}
