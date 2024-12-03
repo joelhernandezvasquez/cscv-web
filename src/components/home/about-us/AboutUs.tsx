@@ -42,7 +42,7 @@ export const AboutUs = async({about}:Props) => {
         Conocer Mas
       </Link> 
 
-      <ul>
+      <ul className={style.carisma_container}>
         {carismas.map(carisma =>{
           return <CarismasCard key={carisma.id} carisma={carisma}/>
         })}

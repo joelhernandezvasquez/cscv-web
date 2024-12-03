@@ -4,23 +4,34 @@
  border-radius: 1rem;
  border:1px solid #e3e8ef;
  padding-bottom: 2rem;
+ max-width: 340px;
 } 
 
 .cover_image{
     width:100%;
     object-fit: cover;
-    height: fit-content;
+    object-position: center;
+    height: 220px;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem; 
 }
 
 .body{
-    padding:.5rem 1rem;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    padding:.5rem 1rem 0;
 }
 
 .card_description{
- margin-bottom:2rem;
+ margin-bottom:1rem;
 }
 .conocer_btn{
     margin:.5rem 0;
     padding:13px 29px;
     border-radius: 2rem;
+    transition:all 200ms ease-in-out;
+}
+.conocer_btn:hover{
+    background:#990e0e;
 }
