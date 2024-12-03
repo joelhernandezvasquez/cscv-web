@@ -1,7 +1,7 @@
 
+import Link from 'next/link';
 import { SubItems } from '@/interfaces/navigation';
 import style from './style.module.css';
-import Link from 'next/link';
 
 interface Props{
     items:SubItems[]

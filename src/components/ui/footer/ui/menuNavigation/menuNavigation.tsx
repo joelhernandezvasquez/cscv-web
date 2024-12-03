@@ -12,7 +12,7 @@ export const MenuNavigation = ({navigationLinks}:Props) => {
     <ul className={style.footer_item_container}>
      {navigationLinks.map((navigation)=>{
         return <li key={navigation.id} className={`${style.footer_item} ${leadText.className}`}>
-                 <Link href={`${navigation.link}`}>{navigation.item}</Link>
+                 <Link href={`${navigation.link}`} className={style.nav_link}>{navigation.item}</Link>
               </li>
      })}
     </ul>

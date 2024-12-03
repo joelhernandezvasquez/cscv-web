@@ -54,63 +54,70 @@ export const Footer = async () => {
 
   return (
     <footer className={style.footer_container}>
-      <div className={style.footer_col}>
-        <Image width={"80"} height={"110"} src={"/images/logo2.png"} alt="" />
 
-        <div className={leadText.className}>
-          <BlocksRenderer content={description} />
-        </div>
+      <div className={style.footer_content_container}>
+          <div className={style.footer_col}>
+            <Image width={"80"} height={"110"} src={"/images/logo2.png"} alt="" />
 
-        <Link
-          className={`${style.footer_cta_btn} ${titleHeadline.className}`}
-          href={"#event-list"}
-        >
-          {" "}
-          Ver Proxima Actividad{" "}
-        </Link>
-      </div>
+            <div className={leadText.className}>
+              <BlocksRenderer content={description} />
+            </div>
 
-      <div className={style.footer_col}>
-        <Title title="Contacts" size="sm" color={"white"} />
-        <FooterContact contacts={contacts} />
-        <SocialMediaMenu sociaLinks={sociaLinks} />
-      </div>
+            <Link
+              className={`${style.footer_cta_btn} ${titleHeadline.className}`}
+              href={"#event-list"}
+            >
+              Ver Proxima Actividad
+            </Link>
+          </div>
 
-      <div className={style.footer_col}>
-        <Title title="Ministerios" size="sm" color={"white"} />
-        <MenuNavigation navigationLinks={menuMinisterios} />
-      </div>
+          <div className={style.footer_col}>
+            <Title title="Contacts" size="sm" color={"white"} />
+            <FooterContact contacts={contacts} />
+            <SocialMediaMenu sociaLinks={sociaLinks} />
+          </div>
 
-      <div className={style.footer_col}>
-        <Title title="Comunidad" size="sm" color={"white"} />
-        <MenuNavigation navigationLinks={menuComunidad} />
-      </div>
+          <div className={style.footer_col}>
+            <Title title="Ministerios" size="sm" color={"white"} />
+            <MenuNavigation navigationLinks={menuMinisterios} />
+          </div>
 
-      <div className={style.footer_col}>
-        <Title title="Actividades" size="sm" color={"white"} />
-        <MenuNavigation navigationLinks={menuActivities} />
-      </div>
+          <div className={style.footer_col}>
+            <Title title="Comunidad" size="sm" color={"white"} />
+            <MenuNavigation navigationLinks={menuComunidad} />
+          </div>
 
-      <div className={style.footer_col}>
-        <Title title="Oracion" size="sm" color={"white"} />
-        <MenuNavigation navigationLinks={menuOraciones} />
-      </div>
+          <div className={style.footer_col}>
+            <Title title="Actividades" size="sm" color={"white"} />
+            <MenuNavigation navigationLinks={menuActivities} />
+          </div>
 
-      <div className={style.footer_col}>
-        <Title title="General" size="sm" color={"white"} />
-        <MenuNavigation navigationLinks={menuGeneral} />
+          <div className={style.footer_col}>
+            <Title title="Oracion" size="sm" color={"white"} />
+            <MenuNavigation navigationLinks={menuOraciones} />
+          </div>
+
+          <div className={style.footer_col}>
+            <Title title="General" size="sm" color={"white"} />
+            <MenuNavigation navigationLinks={menuGeneral} />
+          </div>
+
       </div>
 
       <div className={style.footer_divider}></div>
-
-      <p className={leadText.className}>
-        Copyright © 2024 Comunidad Siervos De Cristo Vivo. All Rights Reserved.
-      </p>
-      <p className={leadText.className}>
-        {" "}
-        Developed with <span style={{ color: "red" }}> &#10084; </span> by Joel
-        Hernandez.
-      </p>
+      
+      <div className={style.footer_bottom_container}>
+        
+          <p className={leadText.className}>
+            Copyright © 2024 Comunidad Siervos De Cristo Vivo. All Rights Reserved.
+          </p>
+          
+          <p className={leadText.className}>
+            Developed with <span style={{ color: "red" }}> &#10084; </span> by Joel
+            Hernandez.
+          </p>
+      </div>
+      
     </footer>
   );
 };

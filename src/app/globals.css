@@ -7,6 +7,10 @@
   --black_text_clr:#121926;
   --spacing:1rem;
 
+  @media(min-width: 1240px){
+    --spacing:2rem;
+  }
+
 }
 
 * {
