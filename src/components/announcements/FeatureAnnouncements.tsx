@@ -16,7 +16,7 @@ const FeatureAnnouncements = async({anuncios}:Props) => {
   return (
     <section className={`${style.wrapper} ${'block'}`}>
      
-         <Title className='center_text' title={title} size='md' color='white'/>
+         <Title className={`${'center_text'} ${style.headline}`} title={title} size='md' color='white'/>
           
           <div className={`${style.description} ${leadText.className}`}>
             <BlocksRenderer content={description}/>

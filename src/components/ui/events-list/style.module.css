@@ -16,9 +16,22 @@
     color:var(--neutral_clr);
 }
 .event_list{
-  display:flex;
-  flex-direction: column;
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr)) ;
   gap:1rem;
   padding:var(--spacing);
- 
+}
+
+@media(min-width:767px){
+  .event_list{
+    gap:2rem;
+  }
+  .header_title{
+    font-size: 2.5rem;
+  }
+  .event_description{
+    font-size: 1.3rem;
+    max-width: 500px;
+}
+
 }

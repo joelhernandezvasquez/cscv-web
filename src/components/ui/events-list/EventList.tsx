@@ -18,8 +18,8 @@ export const EventList = async ({events}:Props) => {
   return (
     <section id="event-list" className={style.event_container}>
        <header className={style.event_header}>
-         <FaCalendarAlt size={30} color="#FFF"/>
-          <Title title={events.title} size={'md'} color={'white'}/>
+         <FaCalendarAlt className={style.calendar_icon} size={30} color="#FFF"/>
+          <Title className={style.header_title} title={events.title} size={'md'} color={'white'}/>
           <div className={`${style.event_description} ${leadText.className}`}>
             <BlocksRenderer content={events.description}/>
           </div>

@@ -36,3 +36,25 @@
     font-size: 1.125rem;
     text-align: center;
 }
+
+@media(min-width:767px){
+
+    .wrapper{
+        gap:.5rem;
+    }
+    .headline{
+        font-size: 2.5rem;
+    }
+    .description{
+        font-size: 1.2rem;
+        max-width: 500px;
+        text-align: center;
+        margin:0 auto;
+    }
+    .video{
+        width:650px;
+        height: 400px;
+        margin:2rem auto;
+    }
+    
+}
