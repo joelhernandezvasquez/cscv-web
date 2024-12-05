@@ -18,7 +18,7 @@ const Ministries = async({ministerios}:Props) => {
 
   return (
     <section className={'block'}>
-       <Title title={title} size={'xl'} color='red' className="center_text"/>
+       <Title title={title} size={'xl'} color='red' className={`${'center_text'} ${style.main_heading}`}/>
        <div className={`${leadText.className} ${style.content}`}>
         <BlocksRenderer content={description}/>
        </div>
