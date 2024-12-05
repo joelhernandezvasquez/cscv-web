@@ -12,7 +12,7 @@ export const ActivityCard = ({activities}:Props) => {
     <li className={style.activity_card}>
       <img
       className={style.activity_card_image}
-       src={activities.image}
+       src={activities.imageUrl}
        width={'100%'}
        height={'100%'} 
        alt=""
@@ -23,7 +23,6 @@ export const ActivityCard = ({activities}:Props) => {
          <p className={`${leadText.className} ${style.card_content_description}`}>{activities.description}</p>
          <p className={`${leadText.className} ${style.card_content_description}`}>{activities.schedule}</p>
        </div>
-
 
     </li>
   )

@@ -5,5 +5,6 @@ export interface Activities {
   },
   activity:string,
   description:string,
-  schedule:string
+  schedule:string,
+  imageUrl:string
 }

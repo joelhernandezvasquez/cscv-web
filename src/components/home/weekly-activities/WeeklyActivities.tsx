@@ -1,5 +1,5 @@
 import { ActivityCard } from "@/components/ui/activity-card/ActivityCard";
-import { subHeading, titleHeadline } from "@/config/font.plugin";
+import { titleHeadline } from "@/config/font.plugin";
 import { getWeeklyActivities } from "@/actions/get-weekly-activities";
 import { Title } from "@/components/ui/title/Title";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
@@ -17,7 +17,7 @@ export const WeeklyActivities = async ({activities}:Props) => {
    
   return (
     <section className="block"> 
-      <Title className={`${subHeading.className} ${style.activity_sm_heading}`} title={activities.title} size={'lg'} color={'red'} />
+      <Title className={`${titleHeadline.className} ${style.activity_sm_heading}`} title={activities.title} size={'md'} color={'red'} />
       <h3 className={`${titleHeadline.className} ${style.activity_heading}`}>
         <BlocksRenderer content={activities.description}/>
       </h3>

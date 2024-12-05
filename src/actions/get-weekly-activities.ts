@@ -20,7 +20,7 @@ export const getWeeklyActivities = async():Promise<Activities[]>=>{
     return response.data.map((activity:Activities)=>{
       const imageUrl =  `${STRAPI_HOST}/${activity.image.url}`;
       return {
-        image:imageUrl,
+        imageUrl,
         activity:activity.activity,
         description:activity.description,
         schedule:activity.schedule
