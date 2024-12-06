@@ -24,7 +24,7 @@ const SliderEvent = ({eventImages,close}:Props) => {
   return (
     <div className={style.modal} role="dialog">
       <div className={style.header} onClick={close}>
-         <IoClose size={30} color={'#fff'}/>
+         <IoClose className={style.close_icon} size={30} color={'#fff'}/>
       </div>
       
       <Swiper

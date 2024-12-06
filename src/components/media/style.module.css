@@ -2,7 +2,7 @@
     .wrapper{
         display:flex;
         flex-direction: column;
-        gap:1.5rem;
+        gap:.5rem;
         width:100%;
         padding-top:1rem;
         padding-bottom:3rem;
@@ -17,9 +17,10 @@
         display:block;
         border:none;
         border-radius: .5rem;
-        width:100%;
+        max-width:650px;
         height: 320px;
         padding:0;
+        margin:0 auto;
         overflow:hidden;
         object-fit: cover;
         object-position: center;
@@ -50,5 +51,36 @@
         border-radius: .5rem;
         text-align: center;
         font-size: 1.125rem;
-        margin:1rem 0;
+        margin-top:2rem;
+    }
+
+    @media(min-width:767px){
+        .wrapper{
+            padding-top:2rem;
+        }
+        .main_heading{
+            font-size: 2.5rem;
+        }
+        .video{
+            height: 450px;
+        }
+        .event_name{
+            margin-top:1.5rem;
+        }
+        .media_description{
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin:0 auto;
+        }
+        .cta_link{
+            max-width:400px;
+            padding:1rem;
+           margin-left: auto;
+           margin-right: auto;
+           cursor: pointer;
+           transition: all 300ms ease-in-out;
+        }
+        .cta_link:hover{
+            background:#541a37;
+        }
     }

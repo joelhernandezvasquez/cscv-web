@@ -69,6 +69,6 @@
   }
   .ministerio_card:hover{
     cursor: pointer;
-    transform: translateY(-12px);
+    /* transform: translateY(-12px); */
   }
 }

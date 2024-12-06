@@ -16,7 +16,7 @@ const Media = async () => {
     <section className={`${style.wrapper} ${'block'}`}>
         <Title 
            title={mediaEvent.title} 
-           className={'center_text'}
+           className={`${'center_text'} ${style.main_heading}`}
            color="white" 
            size='xl'
         />
@@ -28,7 +28,7 @@ const Media = async () => {
 
           <Title
           title={mediaEvent.eventName} 
-          className={'center_text'}
+          className={`${'center_text'} ${style.event_name}`}
           color="white" 
           size='md'/>
 
