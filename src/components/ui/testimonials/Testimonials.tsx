@@ -17,7 +17,7 @@ const Testimonials = async ({ testimonials }: Props) => {
 
   return (
     <section className={`${style.container}`}>
-      <Title title={title} size="md" color="black" />
+      <Title className={style.main_title} title={title} size="md" color="black" />
       <div className={`${leadText.className} ${style.description}`}>
         <BlocksRenderer content={description} />
       </div>
@@ -33,8 +33,8 @@ const Testimonials = async ({ testimonials }: Props) => {
                 height={65}
                 alt={`Avatar Image of ${testimony.name}`}
               />
-              <Title title={testimony.name} color="black" size={"sm"} />
-              <div className={`${leadText.className} ${"center_text"}`}>
+              <Title className={style.card_title} title={testimony.name} color="black" size={"sm"} />
+              <div className={`${leadText.className} ${"center_text"} ${style.description_card}`}>
                 <BlocksRenderer content={testimony.testimony} />
               </div>
             </li>

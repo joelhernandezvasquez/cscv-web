@@ -35,3 +35,34 @@
     object-fit: cover;
     margin-top:-3rem;
 }
+
+@media(min-width:767px){
+    .main_title{
+        font-size: 2.5rem;
+    }
+    .description{
+        font-size: 1.25rem;
+        max-width:620px;
+    }
+    .testiomanials{
+        grid-template-columns: repeat(2,400px); 
+    }
+    .testimony_card{
+        height: fit-content;
+    }
+    .testimony_card_img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .card_title{
+        font-size: 1.5rem;
+    }
+    .description_card{
+        font-size: 1.1rem;
+    }
+    .testimony_card:nth-child(even){
+      margin-top:2rem;
+    }
+    
+}
