@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weekly_activities",
+  "info": {
+    "singularName": "weekly-activity",
+    "pluralName": "weekly-activities",
+    "displayName": "weeklyActivity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "activity": {
+      "type": "string",
+      "required": true
+    },
+    "schedule": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

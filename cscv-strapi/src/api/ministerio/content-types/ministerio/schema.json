@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ministerios",
+  "info": {
+    "singularName": "ministerio",
+    "pluralName": "ministerios",
+    "displayName": "Ministerio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "ministerio": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

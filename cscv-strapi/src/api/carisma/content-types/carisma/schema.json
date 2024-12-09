@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carismas",
+  "info": {
+    "singularName": "carisma",
+    "pluralName": "carismas",
+    "displayName": "Carisma"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "coverImage": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "carismaTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}
