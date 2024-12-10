@@ -9,6 +9,11 @@
 
   @media(min-width: 1240px){
     --spacing:2rem;
+    
+    .max_container{
+      max-width: 1440px;
+      margin:0 auto;
+     }
   }
 
 }
@@ -30,9 +35,7 @@ body {
  display: grid;
  grid-template-rows: auto 1fr auto;
 }
-main {
-  margin: 0 auto;
-}
+
 
 img, picture, video, canvas, svg {
   display: block;
@@ -133,6 +136,9 @@ button{
   background:rgba(0,0,0,.5);
   border-radius: inherit;
  }
+
+
+
 
 
 

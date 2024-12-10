@@ -13,7 +13,7 @@ interface Props{
 export const Hero = ({title,description,image}:Props) => {
 
   return (
-    <section className={style.hero_container}>
+    <section className={`${style.hero_container}`}>
        <HeroImage image= {image}/>
 
       <div className={style.hero_overlay}>

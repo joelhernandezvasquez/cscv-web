@@ -4,16 +4,8 @@
     flex-direction: column;
     height: 580px;
     position:relative;
+
 }
-/* .hero_img_container{
-    height: 100%;
-}
-.hero_img_container img{
-    width: 100%;
-    height: 100%;
-   object-fit: cover;
-   object-position: center;
-} */
 
 .hero_overlay{
     position:absolute;
@@ -32,8 +24,6 @@
 .hero_main_headline{
     color:var(--neutral_clr);
     font-size: 2rem;
-    /* display:flex;
-    flex-direction: column; */
     text-align: center;
     max-width: 340px;
 }

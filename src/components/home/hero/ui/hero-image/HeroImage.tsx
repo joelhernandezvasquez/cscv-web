@@ -1,5 +1,6 @@
 
-'use client'
+'use client';
+
 /* eslint-disable @next/next/no-img-element */
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { LARGE_SCREEN_IMAGE } from "@/constants/constant";

@@ -22,7 +22,7 @@ export const WeeklyActivities = async ({activities}:Props) => {
         <BlocksRenderer content={activities.description}/>
       </h3>
       
-      <ul className={style.activities_container}>
+      <ul className={`${style.activities_container}`}>
        {activitiesList.map((element)=>{
         return <ActivityCard key={element.activity} activities={element}/>
        })}

@@ -15,7 +15,7 @@ export const AboutUs = async({about}:Props) => {
   const carismas = await getCarismas();
 
   return (
-    <section className={`${"block"} ${style.about_container}`}>
+    <section className={`${"block"} ${style.about_container} ${'max_container'}`}>
      
      <div className={style.header}>
        <div className={style.red_dot}></div>
