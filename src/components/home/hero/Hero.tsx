@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { BlocksRenderer} from '@strapi/blocks-react-renderer';
 import { leadText, titleHeadline } from '@/config/font.plugin';
-import style from './style.module.css';
 import HeroImage from './ui/hero-image/HeroImage';
+import { ClientOnly } from '@/components/client-only/ClientOnly';
+import style from './style.module.css';
 
 interface Props{
   title:string,
@@ -14,8 +15,11 @@ export const Hero = ({title,description,image}:Props) => {
 
   return (
     <section className={`${style.hero_container}`}>
-       <HeroImage image= {image}/>
-
+       
+       <ClientOnly>
+         <HeroImage image = {image}/>
+       </ClientOnly>
+      
       <div className={style.hero_overlay}>
         
        <h1 className={`${titleHeadline.className} ${style.hero_main_headline}`}>
