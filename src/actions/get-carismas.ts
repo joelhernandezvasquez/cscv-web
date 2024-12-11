@@ -1,4 +1,5 @@
 import { Carisma } from "@/interfaces/carisma";
+import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
 const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 
@@ -16,7 +17,8 @@ export const getCarismas = async():Promise<Carisma[]> =>{
 
     return response.data.map((carisma:Carisma)=>{
      const {coverImage} = carisma;
-     const imageUrl = `${STRAPI_HOST}${coverImage?.url}`
+
+     const imageUrl = IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}${coverImage?.url}` : coverImage?.url
      
      return {
         id:carisma.id,

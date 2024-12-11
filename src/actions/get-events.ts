@@ -1,4 +1,5 @@
 import { Events } from "@/interfaces/events";
+import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
 const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 export const getEventList = async():Promise<Events[]> =>{
@@ -19,7 +20,7 @@ export const getEventList = async():Promise<Events[]> =>{
 
       return response.data.map((event:Events)=>{
         const {graphic} = event;
-        const graphicUrl = `${STRAPI_HOST}/${graphic.url}`;
+        const graphicUrl = IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}/${graphic.url}` : graphic.url
 
         return{
             ...event,

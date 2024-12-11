@@ -1,4 +1,5 @@
 import { Activities } from "@/interfaces/activities";
+import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
 const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 
@@ -18,7 +19,7 @@ export const getWeeklyActivities = async():Promise<Activities[]>=>{
     const response = await request.json();
     
     return response.data.map((activity:Activities)=>{
-      const imageUrl =  `${STRAPI_HOST}/${activity.image.url}`;
+      const imageUrl = IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}/${activity.image.url}` : activity.image.url;
       return {
         imageUrl,
         activity:activity.activity,

@@ -1,4 +1,5 @@
 import { Announcements } from "@/interfaces/anuncios";
+import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
 const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 
@@ -18,7 +19,8 @@ export const getAnnouncements = async ():Promise<Announcements[]> =>{
   
       
       return response.data.map((data:Announcements)=>{
-        const url = `${STRAPI_HOST}/${data.videoSource.url}`
+
+        const url = IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}/${data.videoSource.url}` : data.videoSource.url;
         return {url:url}
       })
     }

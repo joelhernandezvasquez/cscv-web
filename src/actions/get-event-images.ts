@@ -1,4 +1,5 @@
 import { EventImage } from "@/interfaces/event-images";
+import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
 const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 
@@ -20,7 +21,7 @@ export const getEventImages = async():Promise<EventImage[]> => {
       const imagesUrl  = event.image.map((element)=>{
         return{
           id:element.id,
-          url:`${STRAPI_HOST}${element.url}`
+          url: IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}${element.url}` : element.url
         }
        
       })

@@ -1,4 +1,5 @@
 import { Testimonies } from "@/interfaces/testimonies";
+import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
 const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 
@@ -19,7 +20,7 @@ export const getTestimonies = async():Promise<Testimonies[]> =>{
 
       return response.data.map((testimony:Testimonies)=>{
         const {avatar} = testimony;
-        const avatarImage = `${STRAPI_HOST}/${avatar.url}`;
+        const avatarImage = IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}/${avatar.url}` : avatar.url;
 
         return {
             ...testimony,

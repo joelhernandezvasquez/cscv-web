@@ -1,4 +1,5 @@
 import { Ministerios } from "@/interfaces/ministerios";
+import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
 const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 
@@ -19,7 +20,7 @@ export const getMinisterios = async():Promise<Ministerios[]> => {
 
       return response.data.map((ministerios:Ministerios)=>{
         const {image} = ministerios;
-        const urlImage = `${STRAPI_HOST}/${image.url}`;
+        const urlImage = IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}/${image.url}` : image.url;
 
         return {
              ...ministerios,
