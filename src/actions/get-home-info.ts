@@ -2,6 +2,7 @@ import { HomeInfo } from "@/interfaces/homeInfo";
 
 const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 
+ //const {STRAPI_HOST_PROD,STRAPI_TOKEN_PROD} = process.env;
 export const getHomeInfo = async ():Promise<HomeInfo>=>{
   try{
     const request = await fetch(`${STRAPI_HOST}/api/home?populate=*`,{
