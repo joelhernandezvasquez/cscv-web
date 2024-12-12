@@ -1,7 +1,7 @@
 import { EventImage } from "@/interfaces/event-images";
 import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
-const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
+ const {STRAPI_HOST,STRAPI_TOKEN} = process.env;;
 
 export const getEventImages = async():Promise<EventImage[]> => {
   try{
@@ -18,7 +18,9 @@ export const getEventImages = async():Promise<EventImage[]> => {
     const response = await request.json();
    
     return response.data.map((event:EventImage)=>{
+
       const imagesUrl  = event.image.map((element)=>{
+     
         return{
           id:element.id,
           url: IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}${element.url}` : element.url
@@ -26,8 +28,8 @@ export const getEventImages = async():Promise<EventImage[]> => {
        
       })
      
-       const videoUrl = `${STRAPI_HOST}${event.video.url}`;
-
+       const videoUrl =  IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}${event.video.url}`:event.video.url;
+      
        return{
          title:event.title,
          eventName:event.eventName,
