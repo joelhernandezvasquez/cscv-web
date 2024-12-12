@@ -1,3 +1,6 @@
+
+
+
 import { Announcements } from "@/interfaces/anuncios";
 import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 
@@ -6,7 +9,6 @@ const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 export const getAnnouncements = async ():Promise<Announcements[]> =>{
     try{
       const request = await fetch(`${STRAPI_HOST}/api/anuncios?populate=*`,{
-        cache: 'no-store',
         headers:{
             Authorization:`Bearer ${STRAPI_TOKEN}`
         },

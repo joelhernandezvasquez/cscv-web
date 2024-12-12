@@ -7,7 +7,6 @@ export const getWeeklyActivities = async():Promise<Activities[]>=>{
 
   try{
     const request = await fetch(`${STRAPI_HOST}/api/weekly-activities?fields[1]=description&fields[2]=activity&fields[3]=schedule&populate[image][fields][0]=url`,{
-      cache: 'no-store',
       headers:{
         Authorization:`Bearer ${STRAPI_TOKEN}`
       }

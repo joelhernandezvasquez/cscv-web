@@ -1,3 +1,4 @@
+
 import { Hero } from "@/components/home/hero/Hero";
 import { getHomeInfo } from "@/actions/get-home-info";
 import { AboutUs } from "@/components/home/about-us/AboutUs";

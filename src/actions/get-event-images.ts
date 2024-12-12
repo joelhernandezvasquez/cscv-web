@@ -6,7 +6,6 @@ import { IsCurrentEnvironmentDevelopment } from "@/util/getCurrentEnvironment";
 export const getEventImages = async():Promise<EventImage[]> => {
   try{
     const request = await fetch(`${STRAPI_HOST}/api/event-images?populate=*`,{
-      cache: 'no-store',
         headers:{
             Authorization:`Bearer ${STRAPI_TOKEN}`
         }

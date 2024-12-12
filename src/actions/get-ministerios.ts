@@ -7,7 +7,6 @@ export const getMinisterios = async():Promise<Ministerios[]> => {
  
     try{
       const request = await fetch(`${STRAPI_HOST}/api/ministerios?fields[0]=slug&fields[1]=ministerio&fields[2]=description&populate[image][fields][3]=url`,{
-        cache: 'no-store',
         headers:{
             Authorization:`Bearer ${STRAPI_TOKEN}`
         }

@@ -7,7 +7,6 @@ export const getTestimonies = async():Promise<Testimonies[]> =>{
  
     try{
       const request = await fetch(`${STRAPI_HOST}/api/testimonios?fields[0]=id&fields[1]=name&fields[2]=testimony&populate[avatar][fields][3]=url`,{
-        cache: 'no-store',
         headers:{
             Authorization:`Bearer ${STRAPI_TOKEN}`
         }
