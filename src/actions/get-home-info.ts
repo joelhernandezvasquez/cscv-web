@@ -6,6 +6,7 @@ const {STRAPI_HOST,STRAPI_TOKEN} = process.env;
 export const getHomeInfo = async ():Promise<HomeInfo>=>{
   try{
     const request = await fetch(`${STRAPI_HOST}/api/home?populate=*`,{
+      cache: 'no-store',
       headers:{
           Authorization:`Bearer ${STRAPI_TOKEN}`
       }

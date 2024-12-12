@@ -6,6 +6,7 @@ export const getFooter = async():Promise<Footer> =>{
   
     try{
       const request = await fetch(`${STRAPI_HOST}/api/footer`,{
+        cache: 'no-store',
         headers:{
             Authorization:`Bearer ${STRAPI_TOKEN}`
         }

@@ -6,6 +6,7 @@ export const getEventList = async():Promise<Events[]> =>{
  
     try{
       const request = await fetch(`${STRAPI_HOST}/api/events?fields[0]=id&fields[1]=slug&fields[2]=name&fields[4]=description&fields[5]=eventDates&fields[6]=price&fields[7]=requisitos&fields[8]=location&populate[graphic][fields][3]=url`,{
+        cache: 'no-store',
         headers:{
             Authorization:`Bearer ${STRAPI_TOKEN}`
         }
