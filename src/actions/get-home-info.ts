@@ -8,7 +8,8 @@ export const getHomeInfo = async ():Promise<HomeInfo>=>{
     const request = await fetch(`${STRAPI_HOST}/api/home?populate=*`,{
       headers:{
           Authorization:`Bearer ${STRAPI_TOKEN}`
-      }
+      },
+      next: { revalidate: 0 },
     })
   
     if(!request.ok){
