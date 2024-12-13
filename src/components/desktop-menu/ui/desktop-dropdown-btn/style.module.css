@@ -1,0 +1,34 @@
+
+.btn_subMenu{
+    display:flex;
+    align-items: flex-end;
+    gap:.5rem;
+    color:var(--brand_red_clr);   
+}
+.btn_subMenu span{
+    position:relative;
+}
+
+.btn_subMenu span:hover::before{
+ position:absolute;
+ content:"";
+ bottom:-5px;
+ width: 100%;
+ height: 2px;
+ background:var(--brand_red_clr);
+}
+
+.active.btn_subMenu span::before{
+    position:absolute;
+    content:"";
+    bottom:-5px;
+    width: 100%;
+    height: 2px;
+    background:var(--brand_red_clr);
+}
+   
+
+
+.rotate_icon{
+    transform:rotate(180deg);
+}

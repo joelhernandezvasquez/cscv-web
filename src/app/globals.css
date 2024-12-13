@@ -3,9 +3,18 @@
   --main_bg:#F7FAFC;
   --neutral_clr:#FFFFFF;
   /* #F4F4F4 */
-  --brand_red_clr:#C41E02;
+  --brand_red_clr:#b80000;
   --black_text_clr:#121926;
   --spacing:1rem;
+
+  @media(min-width: 1240px){
+    --spacing:2rem;
+    
+    .max_container{
+      max-width: 1440px;
+      margin:0 auto;
+     }
+  }
 
 }
 
@@ -22,8 +31,12 @@ html, body {
 body {
  line-height: 1.5;
  font-family: "Poppins", sans-serif;
- /* background:var(--main_bg); */
+ min-height: 100vh;
+ display: grid;
+ grid-template-rows: auto 1fr auto;
 }
+
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
@@ -52,6 +65,10 @@ a{
   color:inherit;
 }
 
+p{
+  line-height: 1.7;
+}
+
 @media (prefers-color-scheme: dark) {
 
 }
@@ -59,7 +76,10 @@ a{
 .center_content{
   margin:0 auto;
 }
-
+.center_text{
+  text-align: center;
+  line-height: 1.7;
+}
 button{
   border:none;
   cursor: pointer;
@@ -83,6 +103,9 @@ button{
   display:flex;
   align-items: center;
   justify-content: space-between;
+}
+.flex_col{
+  display:flex;
 }
 
 .widget_container{
@@ -113,6 +136,12 @@ button{
   background:rgba(0,0,0,.5);
   border-radius: inherit;
  }
+
+
+
+
+
+
 
 
 

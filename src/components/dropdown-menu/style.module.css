@@ -1,0 +1,27 @@
+
+.dropdown_container{
+    position:absolute;
+    top:45px;
+    background:white;
+    width:300px;
+    z-index: 100;
+    border-radius: .5rem;
+    box-shadow:rgba(0, 0, 0, 0.2) 0px 2px ;
+    color:var(--black_text_clr);
+    border-top:8px solid var(--brand_red_clr);
+}
+
+.item{
+    padding:1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+     /* border-radius: .5rem; */
+}
+.item:hover{
+ background:var(--brand_red_clr);
+ color:white;
+ /* background:rgb(248, 250, 252); */
+ /* text-decoration: underline;
+ color:var(--brand_red_clr); */
+
+}

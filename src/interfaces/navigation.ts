@@ -7,7 +7,7 @@ export interface MenuNavigation {
   subItems?: SubItems[]
 }
 
-interface SubItems {
+export interface SubItems {
     id:string,
     item:string,
     link:string

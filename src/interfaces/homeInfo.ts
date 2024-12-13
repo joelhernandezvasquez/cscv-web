@@ -5,6 +5,11 @@ export interface HomeInfo{
     title:string,
     description:React.ComponentProps<typeof BlocksRenderer>['content'],
     image:string,
-    about:Block
+    about:Block,
+    activities:Block,
+    events:Block,
+    testimonies:Block,
+    ministerios:Block,
+    anuncios:Block
 }
 

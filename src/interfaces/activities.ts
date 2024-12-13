@@ -1,7 +1,10 @@
 
 export interface Activities {
-  image:string,
+  image:{
+    url:string
+  },
   activity:string,
   description:string,
-  schedule:string
+  schedule:string,
+  imageUrl:string
 }

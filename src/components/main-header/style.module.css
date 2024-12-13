@@ -4,3 +4,33 @@
     padding-top:.5rem;
     padding-bottom: .5rem;
 }
+
+.mobile_menu{
+ display:flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.desktop_menu{
+    display:none;
+}
+
+
+@media (min-width: 1240px) {
+    .mobile_menu{
+        display:none;
+    }
+
+    .main_header{
+        padding:.5rem 2rem !important;
+        box-shadow: (0, 0, 0, 0.2) 0px 2px 4px;
+        background-color:none;
+    }
+
+    .desktop_menu{
+        display:flex;
+        align-items: center;
+        gap:3rem;
+        justify-content: space-between;
+    }
+}

@@ -1,45 +1,53 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-//import { getHomeInfo } from "@/actions/get-home-info";
-import { regularText, titleHeadline } from "@/config/font.plugin";
-//import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { Title } from "@/components/ui/title/Title";
+import { regularText, titleHeadline} from "@/config/font.plugin";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { Block } from "@/interfaces/block";
+import CarismasCard from "@/components/ui/carismas-card/CarismasCard";
+import { getCarismas } from "@/actions/get-carismas";
 import style from "./style.module.css";
+interface Props{
+  about:Block,
+}
 
-export const AboutUs = async () => {
-  //const { about } = await getHomeInfo();
-  const about = {
-    title:'Quienes Somos?'
-  }
+export const AboutUs = async({about}:Props) => {
+  const carismas = await getCarismas();
 
   return (
-    <section className={`${"block"} ${style.about_container}`}>
-      <div className={style.cover_image_overlay}>
-        <iframe
-          className={style.yt_video}
-          width="100%"
-          height="200"
-          src="https://www.youtube.com/embed/7uCV8FbGbQ8?si=quRbiDb1h3vso8yH"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen={true}>
-          </iframe>
-      </div>
+    <section className={`${"block"} ${style.about_container} ${'max_container'}`}>
+     
+     <div className={style.header}>
+       <div className={style.red_dot}></div>
+       <Title className={titleHeadline.className} color="black" size="xs" title="ABOUT US"></Title>
+     </div>
 
-      <h2 className={`${titleHeadline.className} ${style.about_title}`}>
-        {about.title}
-      </h2>
+     <h3 className={`${style.main_heading} ${titleHeadline.className}`}>
+      {about.title}
+     </h3>
+
+     <img
+     width={'100%'}
+     height={300}
+     src={'/images/comunidad.jpeg'}
+     className={style.cover_image}
+     alt=""
+     />
 
       <div className={`${regularText.className} ${style.about_text}`}>
-        {/* <BlocksRenderer content={about.description} /> */}
-        <p>La Comunidad Siervos de Cristo Vivo es una asociación de fieles cuyos miembros son laicos catolicos, que acogiendose al derecho que nuestra iglesia reconoce, forman una comunidad de evangelización.</p>
-        <p>Nace en los sentimientos del Sagrado Corazón de Jesús por el hombre, los cuales inspiraron al Reverendo P. Emiliano Tardif, M.S.C., a María Armenteros Malla y a Evaristo Guzmán Hilario, luego de ocho años es experiencia en el Amor de Dios y en la predicación, a fundar una comunidad que fuera contemplativa y evangalizadora, y cuyo trabajo tenga su centro y fortaleza en corazón de aquel que dice Sin mi no pueden hacer nada (Juan 15,5).</p>
-
+        <BlocksRenderer content={about.description}/>
       </div>
 
       <Link className={`${"btn_cta"} ${style.conocer_btn}`} href="/">
         Conocer Mas
-      </Link>
+      </Link> 
+
+      <ul className={style.carisma_container}>
+        {carismas.map(carisma =>{
+          return <CarismasCard key={carisma.id} carisma={carisma}/>
+        })}
+      </ul>
+
     </section>
   );
 };

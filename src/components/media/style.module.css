@@ -1,0 +1,86 @@
+
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        gap:.5rem;
+        width:100%;
+        padding-top:1rem;
+        padding-bottom:3rem;
+        background: hsla(0, 100%, 36%, 1);
+        background: linear-gradient(280deg, hsla(0, 100%, 36%, 1) 40%, hsla(219, 36%, 11%, 1) 100%);
+        background: -moz-linear-gradient(280deg, hsla(0, 100%, 36%, 1) 40%, hsla(219, 36%, 11%, 1) 100%);
+        background: -webkit-linear-gradient(280deg, hsla(0, 100%, 36%, 1) 40%, hsla(219, 36%, 11%, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B80000", endColorstr="#121926", GradientType=1 );
+    }
+
+    .video{
+        display:block;
+        border:none;
+        border-radius: .5rem;
+        max-width:650px;
+        height: 320px;
+        padding:0;
+        margin:0 auto;
+        overflow:hidden;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .media_description{
+        color:var(--neutral_clr);
+        font-size: 1.125rem;
+    }
+
+    .galleria_container{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:1rem;
+        position:relative;
+
+    }
+    .galleria_item{
+     object-fit: cover;
+     border-radius: 5px;
+    }
+
+    .cta_link{
+        width:100%;
+        background:#0e0309;
+        padding:1rem;
+        color:white;
+        border-radius: .5rem;
+        text-align: center;
+        font-size: 1.125rem;
+        margin-top:2rem;
+    }
+
+    @media(min-width:767px){
+        .wrapper{
+            padding-top:2rem;
+        }
+        .main_heading{
+            font-size: 2.5rem;
+        }
+        .video{
+            height: 450px;
+        }
+        .event_name{
+            margin-top:1.5rem;
+        }
+        .media_description{
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin:0 auto;
+        }
+        .cta_link{
+            max-width:400px;
+            padding:1rem;
+           margin-left: auto;
+           margin-right: auto;
+           cursor: pointer;
+           transition: all 300ms ease-in-out;
+        }
+        .cta_link:hover{
+            background:#541a37;
+        }
+    }

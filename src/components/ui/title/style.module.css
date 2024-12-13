@@ -1,0 +1,28 @@
+
+.xs{
+    font-size: 1rem;
+}
+
+.sm{
+    font-size: 1.2rem;
+}
+
+.md{
+ font-size: 1.5rem;
+}
+.lg{
+ font-size: 1.8rem;
+}
+.xl{
+    font-size: 2rem;
+}
+
+.black{
+    color:var(--black_text_clr);
+}
+.red{
+    color:var(--brand_red_clr);
+}
+.white{
+    color:var(--neutral_clr);
+}

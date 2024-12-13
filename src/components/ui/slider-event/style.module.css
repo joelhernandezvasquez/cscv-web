@@ -1,0 +1,56 @@
+
+.modal{
+     position:fixed;
+     top:0;
+     left:0;
+     width: 100%;
+     height: 100%;
+    background:rgba(0,0,0,0.95);
+    z-index: 100;
+}
+
+.header{
+    display:flex;
+    justify-content: flex-end;
+    padding:.5rem 1rem;
+}
+
+.swiper_container{
+    height:480px;
+}
+
+.swiper_image{
+    object-fit: cover;
+    height: 100%;
+}
+
+.swiper_thumbnail_container{
+    margin-top:.5rem;
+}
+
+.swiper_thumbnail{
+    width:100px;
+    height:80px;
+    border-radius: 2px;
+}
+.close_icon{
+    cursor: pointer;
+}
+
+@media(min-width:1200px){
+    .modal{
+        padding:0 2rem;
+    }
+    .swiper_container{
+        width:800px;
+        height:500px;
+    }
+    .swiper_image{
+        width:100%;
+    }
+    .swiper_thumbnail{
+        width:100%;
+        height:150px;
+        cursor: pointer;
+    }
+}
