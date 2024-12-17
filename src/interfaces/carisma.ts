@@ -1,4 +1,4 @@
-import { BlocksRenderer } from "@strapi/blocks-react-renderer"
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export interface Carisma{
     id:number | string,
@@ -7,5 +7,6 @@ export interface Carisma{
     },
     carismaTitle:string,
     description:React.ComponentProps<typeof BlocksRenderer>['content'],
-    imageUrl:string
+    imageUrl:string,
+    url:string
 }

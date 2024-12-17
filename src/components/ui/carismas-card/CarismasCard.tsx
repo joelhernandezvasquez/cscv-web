@@ -12,7 +12,7 @@ interface Props{
 }
 
 const CarismasCard = ({carisma}:Props) => {
-    const {imageUrl,carismaTitle,description} = carisma;
+    const {imageUrl,carismaTitle,description,url} = carisma;
 
   return (
     <li className={style.card}>
@@ -30,7 +30,7 @@ const CarismasCard = ({carisma}:Props) => {
            <BlocksRenderer content={description}/>
           </div>
 
-           <Link className={`${"btn_cta"} ${style.conocer_btn}`} href="/">
+           <Link className={`${"btn_cta"} ${style.conocer_btn}`} href={url}>
              Conocer Mas
            </Link> 
         </div>

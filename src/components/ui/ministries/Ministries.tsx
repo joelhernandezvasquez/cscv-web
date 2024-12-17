@@ -38,7 +38,7 @@ const Ministries = async({ministerios}:Props) => {
                         <div className={`${style.ministerio_description} ${leadText.className}`}>
                           <BlocksRenderer content={ministerio.description}/>
                         </div>
-                        <Link className={`${titleHeadline.className} ${style.ministerio_card_link}`} href={ministerio.slug}>Read More</Link>
+                        <Link className={`${titleHeadline.className} ${style.ministerio_card_link}`} href={'/'}>Read More</Link>
                       </div>
                    </li>
         })}
