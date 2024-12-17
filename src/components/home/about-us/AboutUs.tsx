@@ -47,7 +47,6 @@ export const AboutUs = async({about}:Props) => {
           return <CarismasCard key={carisma.id} carisma={carisma}/>
         })}
       </ul>
-
     </section>
   );
 };
