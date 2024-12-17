@@ -24,7 +24,8 @@ export const getCarismas = async():Promise<Carisma[]> =>{
         id:carisma.id,
         carismaTitle:carisma.carismaTitle,
         description:carisma.description,
-        imageUrl
+        imageUrl,
+        url:carisma.url
      }
     })
 }
