@@ -35,3 +35,9 @@
 .conocer_btn:hover{
     background:#990e0e;
 }
+
+@media(min-width:1200px){
+    .card_description{
+      font-size: 1.125rem;
+    }
+}
