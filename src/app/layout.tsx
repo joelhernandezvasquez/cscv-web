@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import MainHeader from "@/components/main-header/MainHeader";
+import { Footer } from "@/components/ui/footer/Footer";
 import "./globals.css";
-
 
 export const metadata: Metadata = {
   title: "Comunidad Siervos de Cristo Vivo Brooklyn NY - Catolica",
@@ -15,8 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <MainHeader/>
         {children}
+        <Footer/>
       </body>
+
     </html>
   );
 }

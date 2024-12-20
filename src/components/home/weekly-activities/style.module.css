@@ -1,0 +1,29 @@
+
+.activity_heading{
+    font-size: 1.5rem;
+    color:var(--black_text_clr);
+}
+
+.activities_container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap:1rem;
+    margin:1.5rem 0;
+}
+
+@media(min-width:767px){
+    .activity_sm_heading,.activity_heading{
+        text-align: center;
+    }
+    .activity_sm_heading{
+        font-size: 2.5rem;
+    }
+    .activity_heading{
+        max-width: 600px;
+        margin:0 auto;
+    }
+    .activities_container{
+        gap:2rem;
+    }
+}
+

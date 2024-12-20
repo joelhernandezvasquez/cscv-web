@@ -1,0 +1,1 @@
+export const LARGE_SCREEN_IMAGE = '/images/casa.jpeg';

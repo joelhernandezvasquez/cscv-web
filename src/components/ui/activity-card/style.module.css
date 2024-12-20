@@ -1,0 +1,38 @@
+
+.activity_card{
+    border-radius: .5rem;
+    max-width: 400px;
+    height:400px;
+    position:relative;
+}
+
+.activity_card_image{
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+}
+.card_content{
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ gap:1rem;
+ padding:1rem;
+ color:var(--neutral_clr);
+}
+
+.card_content_headline{
+    font-size: 1.7rem;
+}
+.card_content_description{
+    font-size: 1.125rem;
+}
+
+@media(min-width:1200px){
+    .activity_card{
+        cursor: pointer;
+        transition: transform 500ms ease-in-out;
+    }
+    .activity_card:hover{
+        /* transform: scale(1.1); */
+    }
+}
