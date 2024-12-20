@@ -13,6 +13,7 @@ import styles from "./page.module.css";
 export default async function Home() {
    const {title,description,image,about,activities,events,testimonies,ministerios,anuncios} = await getHomeInfo();
   
+   
    return (
       <main className={styles.main}>
          <Hero title={title} description={description} image={image}/>
