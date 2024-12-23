@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { Block } from '@/interfaces/block';
 import { Title } from '../ui/title/Title';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { getAnnouncements } from '@/actions/get-anuncios';
+//import { getAnnouncements } from '@/actions/get-anuncios';
 import { leadText } from '@/config/font.plugin';
 import style from './style.module.css';
 
@@ -11,7 +12,7 @@ interface Props{
 
 const FeatureAnnouncements = async({anuncios}:Props) => {
   const {title,description} = anuncios;
-  const announcements = await getAnnouncements();
+ // const announcements = await getAnnouncements();
 
   return (
     <section className={`${style.wrapper} ${'block'}`}>
@@ -22,10 +23,12 @@ const FeatureAnnouncements = async({anuncios}:Props) => {
             <BlocksRenderer content={description}/>
           </div>
 
-          <video className={style.video} width="100%" height="360" controls autoPlay>
+          <img className={style.video} src='/images/renacer.jpg' alt=""/>
+
+          {/* <video className={style.video} width="100%" height="360" controls autoPlay>
             <source src={announcements[0].url} type="video/mp4"/>
             Your browser does not support the video tag.
-          </video>
+          </video> */}
 
     </section>
   )
