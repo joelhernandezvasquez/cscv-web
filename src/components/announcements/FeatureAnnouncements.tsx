@@ -2,7 +2,7 @@
 import { Block } from '@/interfaces/block';
 import { Title } from '../ui/title/Title';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import { getAnnouncements } from '@/actions/get-anuncios';
+//import { getAnnouncements } from '@/actions/get-anuncios';
 import { leadText } from '@/config/font.plugin';
 import style from './style.module.css';
 
