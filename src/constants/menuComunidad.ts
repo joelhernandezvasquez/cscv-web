@@ -7,16 +7,16 @@ export const menuComunidad = [
     {
         id:'historia-002',
         item:'Historia',
-        link:'http://www.cscvbrooklyn.org/historia-de-la-comunidad-cscv.html'
+        link:'/construction'
     },
     {
         id:'carisma-003',
         item:'Carisma & Vocacion',
-        link:'http://www.cscvbrooklyn.org/carisma---vocaci-n.html'
+        link:'/construction'
     },
     {
         id:'fundadores-004',
         item:'Fundadores',
-        link:'http://www.cscvbrooklyn.org/fundadores.html'
+        link:'/construction'
     }
 ]
