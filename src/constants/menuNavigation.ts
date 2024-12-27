@@ -21,17 +21,17 @@ export const menuNavigation:MenuNavigation[] =  [
             {
                 id:'002',
                 item:'Historia De La Comunidad',
-                link:'http://www.cscvbrooklyn.org/historia-de-la-comunidad-cscv.html'
+                link:'/construction'
             },
             {
                 id:'003',
                 item:'Carisma & Vocacion',
-                link:'http://www.cscvbrooklyn.org/carisma---vocaci-n.html'
+                link:'/construction'
             },
             {
                 id:'004',
                 item:'Fundadores',
-                link:'http://www.cscvbrooklyn.org/fundadores.html'
+                link:'/construction'
             },
         ]
     },
@@ -43,27 +43,27 @@ export const menuNavigation:MenuNavigation[] =  [
             {
                 id:'005',
                 item:'Escuela De Evangelizacion',
-                link:'http://www.cscvbrooklyn.org/escuela-de-evangelizaci-n.html'
+                link:'/construction'
             },
             {
                 id:'006',
                 item:'Retiros Renacer',
-                link:'http://www.cscvbrooklyn.org/retiros-renacer.html'
+                link:'/construction'
             },
             {
                 id:'007',
                 item:'Parejas',
-                link:'http://www.cscvbrooklyn.org/parejas.html'
+                link:'/construction'
             },
             {
                 id:'008',
                 item:'Ministerio De Los Jovenes',
-                link:'http://www.cscvbrooklyn.org/ministerio-de-jovenes.html'
+                link:'/construction'
             },
             {
                 id:'009',
                 item:'Colaboradores',
-                link:'http://www.cscvbrooklyn.org/colaboradores.html'
+                link:'/construction'
             },
         ]
     },
@@ -82,29 +82,29 @@ export const menuNavigation:MenuNavigation[] =  [
             {
                 id:'0010',
                 item:'Asamblea De Los Jueves',
-                link:'/'
+                link:'/construction'
             },
             {
                 id:'0011',
                 item:'Grupo De Oracion De Los Miercoles',
-                link:'/'
+                link:'/construction'
             },
             {
                 id:'0012',
                 item:'Adoracion al Santisimo Sacramento',
-                link:'/'
+                link:'/construction'
             },
             {
                 id:'0013',
                 item:'Grupo Juvenil The Chosen',
-                link:'/'
+                link:'/construction'
             },
         ]
     },
     {
         id:'05',
         item:'Multimedia',
-        link:'http://www.cscvbrooklyn.org/multimedia.html',
+        link:'/construction',
         hasSubmenu:false
     },
     {
@@ -169,17 +169,17 @@ export const desktopMenuNavigation:MenuNavigation[] =  [
             {
                 id:'002',
                 item:'Historia De La Comunidad',
-                link:'http://www.cscvbrooklyn.org/historia-de-la-comunidad-cscv.html'
+                link:'/construction'
             },
             {
                 id:'003',
                 item:'Carisma & Vocacion',
-                link:'http://www.cscvbrooklyn.org/carisma---vocaci-n.html'
+                link:'/construction'
             },
             {
                 id:'004',
                 item:'Fundadores',
-                link:'http://www.cscvbrooklyn.org/fundadores.html'
+                link:'/construction'
             },
         ]
     },
@@ -191,27 +191,27 @@ export const desktopMenuNavigation:MenuNavigation[] =  [
             {
                 id:'005',
                 item:'Escuela De Evangelizacion',
-                link:'http://www.cscvbrooklyn.org/escuela-de-evangelizaci-n.html'
+                link:'/construction'
             },
             {
                 id:'006',
                 item:'Retiros Renacer',
-                link:'http://www.cscvbrooklyn.org/retiros-renacer.html'
+                link:'/construction'
             },
             {
                 id:'007',
                 item:'Parejas',
-                link:'http://www.cscvbrooklyn.org/parejas.html'
+                link:'/construction'
             },
             {
                 id:'008',
                 item:'Ministerio De Los Jovenes',
-                link:'http://www.cscvbrooklyn.org/ministerio-de-jovenes.html'
+                link:'/construction'
             },
             {
                 id:'009',
                 item:'Colaboradores',
-                link:'http://www.cscvbrooklyn.org/colaboradores.html'
+                link:'/construction'
             },
         ]
     },
@@ -224,29 +224,29 @@ export const desktopMenuNavigation:MenuNavigation[] =  [
             {
                 id:'0010',
                 item:'Asamblea De Los Jueves',
-                link:'/'
+                link:'/construction'
             },
             {
                 id:'0011',
                 item:'Grupo De Oracion De Los Miercoles',
-                link:'/'
+                link:'/construction'
             },
             {
                 id:'0012',
                 item:'Adoracion al Santisimo Sacramento',
-                link:'/'
+                link:'/construction'
             },
             {
                 id:'0013',
                 item:'Grupo Juvenil The Chosen',
-                link:'/'
+                link:'/construction'
             },
         ]
     },
     {
         id:'05',
         item:'Multimedia',
-        link:'http://www.cscvbrooklyn.org/multimedia.html',
+        link:'/construction',
         hasSubmenu:false
     },
     {
