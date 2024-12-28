@@ -14,9 +14,8 @@
 .card_content{
  display:flex;
  flex-direction: column;
- justify-content: center;
  gap:1rem;
- padding:1rem;
+ padding:3rem 1rem ;
  color:var(--neutral_clr);
 }
 
