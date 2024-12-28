@@ -1,6 +1,6 @@
 .ministerio_card{
   position:relative;
-  height:400px;
+  height:380px;
   border-radius:20px;
   transition:transform 400ms ease-in-out;
 }
@@ -20,7 +20,6 @@
 .ministerio_card_info{
   display:flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap:.5rem;
   position:absolute;
   width:100%;
@@ -29,7 +28,7 @@
   left:0;
   border-radius: inherit;
   background:rgba(0,0,0,.5);
-  padding:2rem 1rem;
+  padding:3rem 1rem;
   color:white;
 }
 
@@ -62,6 +61,10 @@
     max-width: 650px;
     margin:0 auto;
     font-size: 1.25rem;
+  }
+
+  .ministerio_card{
+    height:320px;
   }
 
   .ministerios_menu{
