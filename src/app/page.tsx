@@ -11,7 +11,7 @@ import Media from "@/components/media/Media";
 import styles from "./page.module.css";
 
 export default async function Home() {
-   const {title,description,image,about,activities,events,testimonies,ministerios} = await getHomeInfo();
+   const {title,description,image,about,activities,events,ministerios} = await getHomeInfo();
   
    
    return (
@@ -23,7 +23,7 @@ export default async function Home() {
          <WeeklyActivities activities={activities}/> 
          <Ministries ministerios={ministerios}/>
          <Media/>
-         <Testimonials testimonials={testimonies}/>
+         {/* <Testimonials testimonials={testimonies}/> */}
       </main>
   );
 }
