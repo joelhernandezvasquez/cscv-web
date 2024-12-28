@@ -17,13 +17,14 @@
 }
 .event_list{
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr)) ;
+  grid-template-columns: repeat(auto-fit,minmax(300px,390px)) ;
   gap:1rem;
   padding:var(--spacing);
 }
 
 @media(min-width:767px){
   .event_list{
+    justify-content: center;
     gap:2rem;
   }
   .header_title{

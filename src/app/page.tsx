@@ -4,7 +4,7 @@ import { getHomeInfo } from "@/actions/get-home-info";
 import { AboutUs } from "@/components/home/about-us/AboutUs";
 import { WeeklyActivities } from "@/components/home/weekly-activities/WeeklyActivities";
 import { EventList } from "@/components/ui/events-list/EventList";
-import Testimonials from "@/components/ui/testimonials/Testimonials";
+// import Testimonials from "@/components/ui/testimonials/Testimonials";
 import Ministries from "@/components/ui/ministries/Ministries";
 // import FeatureAnnouncements from "@/components/announcements/FeatureAnnouncements";
 import Media from "@/components/media/Media";
