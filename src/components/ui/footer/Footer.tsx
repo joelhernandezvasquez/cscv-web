@@ -52,6 +52,9 @@ export const Footer = async () => {
     },
   ];
 
+  const currentYear = new Date().getFullYear();
+
+
   return (
     <footer className={style.footer_container}>
 
@@ -109,7 +112,7 @@ export const Footer = async () => {
       <div className={style.footer_bottom_container}>
         
           <p className={leadText.className}>
-            Copyright © 2024 Comunidad Siervos De Cristo Vivo. All Rights Reserved.
+            Copyright © {currentYear} Comunidad Siervos De Cristo Vivo. All Rights Reserved.
           </p>
           
           <p className={leadText.className}>
