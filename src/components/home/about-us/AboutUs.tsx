@@ -38,7 +38,7 @@ export const AboutUs = async({about}:Props) => {
         <BlocksRenderer content={about.description}/>
       </div>
 
-      <Link className={`${"btn_cta"} ${style.conocer_btn}`} href="http://www.cscvbrooklyn.org/historia-de-la-comunidad-cscv.html">
+      <Link className={`${"btn_cta"} ${style.conocer_btn}`} href="/construction">
         Conocer Mas
       </Link> 
 

@@ -52,12 +52,15 @@ export const Footer = async () => {
     },
   ];
 
+  const currentYear = new Date().getFullYear();
+
+
   return (
     <footer className={style.footer_container}>
 
       <div className={style.footer_content_container}>
           <div className={style.footer_col}>
-            <Image width={"80"} height={"110"} src={"/images/logo2.png"} alt="" />
+            <Image width={"80"} height={"110"} src={"/images/cscvWhite.png"} alt="" />
 
             <div className={leadText.className}>
               <BlocksRenderer content={description} />
@@ -109,7 +112,7 @@ export const Footer = async () => {
       <div className={style.footer_bottom_container}>
         
           <p className={leadText.className}>
-            Copyright © 2024 Comunidad Siervos De Cristo Vivo. All Rights Reserved.
+            Copyright © {currentYear} Comunidad Siervos De Cristo Vivo. All Rights Reserved.
           </p>
           
           <p className={leadText.className}>
