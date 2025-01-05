@@ -1,6 +1,6 @@
 .ministerio_card{
   position:relative;
-  height:380px;
+  height:420px;
   border-radius:20px;
   transition:transform 400ms ease-in-out;
 }
@@ -63,15 +63,14 @@
     font-size: 1.25rem;
   }
 
-  .ministerio_card{
-    height:320px;
-  }
-
   .ministerios_menu{
     gap:2rem;
   }
   .ministerio_card:hover{
     cursor: pointer;
-    /* transform: translateY(-12px); */
+    transform: translateY(-12px);
+    /* transform: scale(1.1); */
+
   }
 }
+  
