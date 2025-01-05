@@ -1,4 +1,5 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+
 import Link from "next/link";
 import { Title } from "../title/Title";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
@@ -60,7 +61,7 @@ export const Footer = async () => {
 
       <div className={style.footer_content_container}>
           <div className={style.footer_col}>
-            <Image width={"80"} height={"110"} src={"/images/cscvWhite.png"} alt="" />
+            <img width={"80"} height={"110"} src={"/images/logoFooter.png"} alt="" />
 
             <div className={leadText.className}>
               <BlocksRenderer content={description} />
