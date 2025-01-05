@@ -2,7 +2,7 @@ export const menuComunidad = [
     {
         id:'comunidad-001',
         item:'Comunidad Siervos De Cristo Vivo',
-        link:'https://cscvmiami.org/quienes.aspx'
+       link:'/construction'
     },
     {
         id:'historia-002',

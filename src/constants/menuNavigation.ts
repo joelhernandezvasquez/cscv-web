@@ -16,7 +16,7 @@ export const menuNavigation:MenuNavigation[] =  [
             {
                 id:'001',
                 item:'La CSCV',
-                link:'https://cscvmiami.org/quienes.aspx'
+                link:'/construction'
             },
             {
                 id:'002',
@@ -164,7 +164,7 @@ export const desktopMenuNavigation:MenuNavigation[] =  [
             {
                 id:'001',
                 item:'La CSCV',
-                link:'https://cscvmiami.org/quienes.aspx'
+                link:'/construction'
             },
             {
                 id:'002',
