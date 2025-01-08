@@ -2,7 +2,7 @@
 
 .mobile_menu_container{
     position:absolute;
-    top:55px;
+    top:100px;
     left:0;
     right: 0;
     width:100%;
@@ -58,7 +58,7 @@
     }
     100% {
       opacity: 1;
-      height: 600px;
+      height: 100vh;
     }
   }
 
