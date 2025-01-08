@@ -7,9 +7,6 @@ import { CiYoutube } from 'react-icons/ci';
 import { FaXTwitter } from 'react-icons/fa6';
 import { titleHeadline } from '@/config/font.plugin';
 import style from './style.module.css';
-/*
- TODO: need to check if this need to be a client component the whole tree
-*/
 
 const MobileMenu = () => {
   return (
