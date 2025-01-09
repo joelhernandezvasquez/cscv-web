@@ -21,7 +21,7 @@ const Media = async () => {
            size='xl'
         />
 
-        <video className={style.video} width="100%" height="350" controls autoPlay>
+        <video className={style.video} width="100%" height="350" controls>
             <source src={mediaEvent.videoUrl} type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
