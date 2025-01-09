@@ -27,11 +27,11 @@ const Ministries = async({ministerios}:Props) => {
         {ministeriosList.map((ministerio)=>{
           return <li key={ministerio.id} className={style.ministerio_card}>
                    <img
-                   className={style.ministerio_img}
-                    width={'100%'}
-                    height={'100%'}
-                    src={ministerio.urlImage}
-                    alt={''}
+                      className={style.ministerio_img}
+                      width={'100%'}
+                      height={'100%'}
+                      src={ministerio.urlImage}
+                      alt={''}
                    />
                       <div className={style.ministerio_card_info}>
                         <h3 className={`${titleHeadline.className} ${style.ministerio_card_title}`}>{ministerio.ministerio}</h3>
