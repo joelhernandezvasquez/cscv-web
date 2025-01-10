@@ -14,6 +14,7 @@
 .event_description{
     text-align: center;
     color:var(--neutral_clr);
+    font-size: 1.125rem;
 }
 .event_list{
   display:grid;

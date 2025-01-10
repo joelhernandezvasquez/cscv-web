@@ -45,3 +45,7 @@
 .event_card_body a:hover{
     background:#990e0e;
 }
+
+.event_card_body p{
+    font-size: 1.125rem;
+}
