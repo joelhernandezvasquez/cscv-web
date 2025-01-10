@@ -25,6 +25,7 @@
 
 .card_description{
  margin-bottom:1rem;
+ font-size: 1.125rem;
 }
 .conocer_btn{
     margin:.5rem 0;
@@ -36,8 +37,3 @@
     background:#990e0e;
 }
 
-@media(min-width:1200px){
-    .card_description{
-      font-size: 1.125rem;
-    }
-}
