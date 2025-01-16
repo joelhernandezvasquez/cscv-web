@@ -4,13 +4,12 @@
     grid-template-columns: 1fr;
     border:1px solid #e3e8ef;
     border-radius: .5rem;
-    max-width: 400px;
-    
+    max-width: 400px; 
 }
 
 .event_card_graphic{
     border-radius: .5rem;
-    min-height:100%;
+    max-height:350px;
     object-fit:cover;
 }
 
