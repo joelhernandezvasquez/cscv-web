@@ -21,7 +21,7 @@ export const menuNavigation:MenuNavigation[] =  [
             {
                 id:'002',
                 item:'Historia De La Comunidad',
-                link:'/construction'
+                link:'/historia'
             },
             {
                 id:'003',
@@ -169,7 +169,7 @@ export const desktopMenuNavigation:MenuNavigation[] =  [
             {
                 id:'002',
                 item:'Historia De La Comunidad',
-                link:'/construction'
+                link:'/historia'
             },
             {
                 id:'003',
