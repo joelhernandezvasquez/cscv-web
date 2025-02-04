@@ -2,7 +2,7 @@
 .headline{
     display:flex;
     flex-direction: column;
-    margin:1rem;
+    margin:1rem 0;
     font-size: 2rem;
     font-weight: 700;
     padding-left:1.5rem;
@@ -28,7 +28,7 @@
 }
 
 .content_container{
-    padding:2rem 1.5rem;
+    padding:2rem 1rem;
     max-width: 1100px;
     margin:0 auto; 
 }
@@ -62,7 +62,6 @@
 .header{
     display:flex;
     justify-content: space-between;
-    padding-right: 5rem;
    
 }
 
@@ -80,6 +79,7 @@
 }
 
 @media(min-width:767px) {
+   
     .grid_column_content{
         grid-template-columns: repeat(2,1fr);
         gap:1.5rem;

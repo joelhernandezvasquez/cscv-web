@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { regularText, titleHeadline } from '@/config/font.plugin';
 import style from './style.module.css';
@@ -18,7 +19,7 @@ const History = () => {
          <h2 className={`${style.heading} ${titleHeadline.className}`}>ORIGEN</h2>
          <p className={`${regularText.className} ${'content_text'}`}>
             Nace en los sentimientos del Sagrado Corazón de Jesús por el hombre, los cuales inspiraron al Siervo de Dios Padre Emiliano Tardif, M.S.C., al Diácono Evaristo Guzmán Hilario (ambos de feliz memoria) y María Armenteros Malla. 
-            Luego de ocho años de experiencia en el Amor de Dios y en la predicación, a fundar una comunidad que fuera contemplativa y evangelizadora, y cuyo trabajo tenga su centro y fortaleza en el corazón de aquel que dice Sin mí no pueden hacer nada (Juan 15,5).
+            Luego de ocho años de experiencia en el Amor de Dios y en la predicación, a fundar una comunidad que fuera contemplativa y evangelizadora, y cuyo trabajo tenga su centro y fortaleza en el corazón de aquel que dice "Sin mí no pueden hacer nada" (Juan 15,5).
          </p>
          
          <div className={style.image_container}>
@@ -36,8 +37,6 @@ const History = () => {
          </p>
 
          <div className={style.grid_column_content}>  
-
-
           <div>
           <p className={`${regularText.className} ${'content_text'}`}>
            La CSCV está formada por laicos católicos (Can. 298), quienes viviendo en el mundo de hoy se reúnen en conformidad con la ley de la iglesia (Can. 299), para establecer una comunidad carismática y evangelizadora, sin tener que vivir en el lugar donde se reúnen. Cada miembro de la CSCV, como lo describen sus estatutos, ha sido llamado por nuestro Señor Jesucristo a vivir tres vocaciones fundamentales:
@@ -54,7 +53,7 @@ const History = () => {
           <li>
               <p className={`${regularText.className} ${'content_text'}`}>
                 Una vida evangelizadora
-                <span className={style.content_text_italic}> (viviendo su llama- do bautismal de proclamar la buena nueva del evangelio).</span>
+                <span className={style.content_text_italic}> (viviendo su llamado bautismal de proclamar la buena nueva del evangelio).</span>
               </p>
           </li>
 
@@ -86,7 +85,7 @@ const History = () => {
          <h2 className={`${style.heading} ${titleHeadline.className}`}>FINALIDAD</h2>
 
          <p className={`${regularText.className} ${'content_text'}`}>
-         El Señor Jesús llamó a los que él quiso para una misión específica: ... para que estuvieran con él, y para enviarlos a predicar (Marcos 3, 13-14). Acogiendo estas palabras del Señor y viviendo en el mundo, la Comunidad Siervos de Cristo Vivo aspira a la perfección de la caridad; por tanto, tiene como objetivo esencial la santificación personal de sus miembros mediante:
+         El Señor Jesús "llamó a los que él quiso" para una misión específica: "para que estuvieran con él, y para enviarlos a predicar" (Marcos 3, 13-14). Acogiendo estas palabras del Señor y viviendo en el mundo, la Comunidad Siervos de Cristo Vivo aspira a la perfección de la caridad; por tanto, tiene como objetivo esencial la santificación personal de sus miembros mediante:
          </p>
 
          <p className={`${regularText.className} ${'content_text'}`}> 
@@ -98,7 +97,7 @@ const History = () => {
          </p>
 
          <p className={`${regularText.className} ${'content_text'}`}> 
-            La construcción día a día, en comunión de fe y amor, de una Comunidad a la que se pertenece como miembro y en la que se participa como Siervo; que se consolida como una Comunidad cristiana en la que cada uno aporta sus talentos y se siente integrado porque es reconocido, aceptado, escuchado, animado e interpelado.
+            La construcción día a día, en comunión de fe y amor, de una Comunidad a la que se pertenece como miembro y en la que se participa como Siervo; que se consolida como "una Comunidad cristiana en la que cada uno aporta sus talentos y se siente integrado porque es reconocido, aceptado, escuchado, animado e interpelado".
          </p>
 
          <h2 className={`${style.heading} ${titleHeadline.className}`}>UN SIERVO</h2>
@@ -106,7 +105,7 @@ const History = () => {
          <div className={style.grid_column_content}> 
            <div>
             <p className={`${regularText.className} ${'content_text'}`}>
-              La Comunidad Siervos de Cristo Vivo reconoce como miembro a aquel laico católico que ha tenido un encuentro personal con Jesucristo, reconociéndole como su Salvador y Señor personal; e, identificándose plenamente con el espíritu de la Comunidad, acepta vivir por completo todo lo señalado en sus Estatutos y Reglamentos
+              La Comunidad Siervos de Cristo Vivo reconoce como "miembro" a aquel laico católico que ha tenido un encuentro personal con Jesucristo, reconociéndole como su Salvador y Señor personal; e, identificándose plenamente con el espíritu de la Comunidad, acepta vivir por completo todo lo señalado en sus Estatutos y Reglamentos
             </p>
 
             <p className={`${regularText.className} ${'content_text'}`}>
