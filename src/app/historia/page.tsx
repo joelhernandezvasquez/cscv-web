@@ -144,7 +144,7 @@ const History = () => {
           </div>
         </section>
 
-      </main></>
+      </main>
   )
 }
 
