@@ -15,6 +15,8 @@ export interface Course {
     flyer: {
      url:string
     },
-    flyerUrl:string
+    flyerUrl:string,
+    name:string,
+    duracion:string
     
   }

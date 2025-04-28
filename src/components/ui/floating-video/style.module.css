@@ -1,0 +1,19 @@
+
+.floatin_video{
+    display:none;
+}
+
+@media(min-width:767px){
+    .floating_video{
+      display:block;
+      margin:0 auto;
+      background:white;
+      border:1px solid #e3e8ef;
+      border-radius: .5rem;
+      width:300px;
+    }
+    .floatin_video video{
+        margin:0 auto;
+    }
+}
+

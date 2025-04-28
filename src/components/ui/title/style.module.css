@@ -16,6 +16,9 @@
 .xl{
     font-size: 2rem;
 }
+.xxl{
+    font-size: 2.5rem;
+}
 
 .black{
     color:var(--black_text_clr);
