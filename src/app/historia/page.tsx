@@ -1,14 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
-import type { Metadata } from "next";
 import { regularText, titleHeadline } from '@/config/font.plugin';
 import style from './style.module.css';
 
-export const metadata: Metadata = {
-  title: "Comunidad Siervos de Cristo Vivo Brooklyn NY | Historia",
-  description: "Historia de La Comunidad Siervos de Cristo Vivo Brooklyn",
-  keywords:"Historia de la Comunidad Siervos de Cristo Vivo catolica Brooklyn historia de Emiliano Tardif"
-};
 
 const History = () => {
 
