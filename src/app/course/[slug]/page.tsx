@@ -56,7 +56,7 @@ return (
         </li>
      </ul>
 
-     <InscriptionBtn background={'#FFFFFF'} color={'#b80000'} contactNumber="6468416837"/> 
+     <InscriptionBtn background={'#FFFFFF'} color={'#b80000'} contactNumber="16468416837"/> 
    </div>
 
   <div className={`${style.course_description} ${style.course_container}`}>
@@ -76,7 +76,7 @@ return (
 
       {course.promocional_video_Url && 
         <FloatingVideo url={course.promocional_video_Url}>
-        <InscriptionBtn background={"#b80000"} color={"#FFFFFF"} contactNumber="6468416837"/> 
+        <InscriptionBtn background={"#b80000"} color={"#FFFFFF"} contactNumber="16468416837"/> 
         </FloatingVideo>
      } 
     </div> 
@@ -121,7 +121,7 @@ return (
    </div>
 
    <FloatingCta>
-       <InscriptionBtn background={"#b80000"} color={"#FFFFFF"} contactNumber="6468416837"/> 
+       <InscriptionBtn background={"#b80000"} color={"#FFFFFF"} contactNumber="16468416837"/> 
     </FloatingCta>
 
     <Title className={style.heading} color="red" title={"Cursos que podrian interesarte"} size={"xl"}/>
