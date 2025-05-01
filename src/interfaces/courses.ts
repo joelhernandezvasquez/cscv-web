@@ -1,4 +1,14 @@
-//import { BlocksRenderer } from "@strapi/blocks-react-renderer"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+type WhatLearnNode =
+  | DefaultInlineNode
+  | ListBlockNode
+  | ListItemInlineNode
+  | { type: "text"; text: string };
+
+  type DefaultInlineNode = any;
+  type ListBlockNode = any;
+  type ListItemInlineNode = any;
 
 export interface Course {
     slug: string,
@@ -9,7 +19,6 @@ export interface Course {
     date:string,
     language:string,
     age:string,
-    //eventDates: React.ComponentProps<typeof BlocksRenderer>['content'],
     price: string,
     requirements: string,
     flyer: {
@@ -17,6 +26,9 @@ export interface Course {
     },
     flyerUrl:string,
     name:string,
-    duracion:string
-    
+    duracion:string,
+    isCourse:boolean,
+    whatLearn:WhatLearnNode
+    promocional_video: { url: string }[]
+     promocional_video_Url:string,
   }

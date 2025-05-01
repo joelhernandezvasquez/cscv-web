@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 // import { Metadata, ResolvingMetadata } from 'next';
+import { redirect } from "next/navigation";
 import { getCourse } from "@/actions/get-course";
 import { leadText} from "@/config/font.plugin";
-import style from './style.module.css';
 import InscriptionBtn from "@/components/ui/inscription-btn/InscriptionBtn";
 import { Title } from "@/components/ui/title/Title";
 import { FcCalendar } from "react-icons/fc";
@@ -13,18 +13,25 @@ import Video from "@/components/ui/video/Video";
 import { getEventList } from "@/actions/get-events";
 import { EventCard } from "@/components/ui/event-card/EventCard";
 import FloatingVideo from "@/components/ui/floating-video/FloatingVideo";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import style from './style.module.css';
 interface Props{
     params: {
     slug: string
   }
 }
-
+/* need clean types on strapi course */
 const CoursePage = async({params}:Props) => {
     const {slug} = params;
-    const course = await getCourse(slug);
-    const eventList = await getEventList();
-  
-  return (
+    const [course,eventList] = await Promise.all([getCourse(slug),getEventList()]);
+    const whatToLearnItems = course?.whatLearn[0]?.children;
+    const filterEventList = eventList.filter(event => event.slug!==course.slug);
+
+    if(!course){
+      redirect('/');
+    }
+
+return (
   <section>
    <div className={`${style.course_container} ${style.banner}`}>
      <Title title={course.name} size={"xxl"} color="white"/>
@@ -49,62 +56,39 @@ const CoursePage = async({params}:Props) => {
         </li>
      </ul>
 
-     <InscriptionBtn background={'#FFFFFF'} color={'#b80000'}/> 
+     <InscriptionBtn background={'#FFFFFF'} color={'#b80000'} contactNumber="6468416837"/> 
    </div>
 
-   <div className={`${style.course_description} ${style.course_container}`}>
-     <Title title={"Sobre Este Curso"} size={"lg"}/>
+  <div className={`${style.course_description} ${style.course_container}`}>
+     
+     <div className={style.wrapper}>
+      <div>
+     <Title title={ course.isCourse ?"Sobre Este Curso" :"Sobre Este Retiro"} size={"lg"}/>
      <p className={leadText.className}>{course.description}</p>
     
     <div className={style.what_learn}>
       <Title title={"Lo que Aprenderas"} size={"md"}/>
-      <ul>
-        <li className={style.what_learn_items}>
-          <span>✓</span>
-          <p className={`${leadText.className}`}>
-            Fundamentos de la fe cristiana
-          </p>
-        </li>
-
-        <li className={style.what_learn_items}>
-          <span>✓</span>
-          <p className={`${leadText.className}`}>
-           
-          Principios bíblicos para la vida diaria
-          
-          </p>
-        </li>
-
-        <li className={style.what_learn_items}>
-          <span>✓</span>
-          <p className={`${leadText.className}`}>
-           
-          Técnicas de estudio de la Biblia
-          
-          </p>
-        </li>
-
-        <li className={style.what_learn_items}>
-          <span>✓</span>
-          <p className={`${leadText.className}`}>
-           
-          Desarrollo de una vida de oración más profunda
-          
-          </p>
-        </li>
+      <ul className={`${style.what_learn_items} ${leadText.className}`}> 
+        <BlocksRenderer content={whatToLearnItems}/>
       </ul>
     </div>
+    </div> 
 
-   <div className={style.video}>
-    <Video width={"100%"} height={"100%"} url={"https://healing-memory-8a8072e443.media.strapiapp.com/VIDEO_2025_01_25_18_23_48_38fedfdfbd.mov"}/>
-  </div>
+      {course.promocional_video_Url && 
+        <FloatingVideo url={course.promocional_video_Url}>
+        <InscriptionBtn background={"#b80000"} color={"#FFFFFF"} contactNumber="6468416837"/> 
+        </FloatingVideo>
+     } 
+    </div> 
 
-    
+ <div className={style.video}>
+    <Video width={"100%"} height={"100%"} url={course.promocional_video_Url}/>
+  </div>  
 
-    <div className={style.more_info}>
+  <div className={style.more_info}>
        <div>
         <Title title={"Requisitos"} size={"lg"} color="red"></Title>
-          <p className={leadText.className}>El curso Felipe corresponde a los que no han hecho un curso de la escuela.</p>
+          <p className={leadText.className}>{course.requirements}</p>
        </div>
 
        <div>
@@ -132,26 +116,22 @@ const CoursePage = async({params}:Props) => {
         </ul>
          
        </div>
-    </div>
+    </div> 
    
    </div>
 
-    <FloatingCta>
-       <InscriptionBtn background={"#b80000"} color={"#FFFFFF"}/> 
+   <FloatingCta>
+       <InscriptionBtn background={"#b80000"} color={"#FFFFFF"} contactNumber="6468416837"/> 
     </FloatingCta>
 
-    <FloatingVideo/>
-    
     <Title className={style.heading} color="red" title={"Cursos que podrian interesarte"} size={"xl"}/>
     
     <ul className={`${style.event_list} ${'max_container'}`}>
-        {eventList.map((event)=>{
+        {filterEventList.map((event)=>{
           return <EventCard key={event.id} event={event}/>
         })}
-    </ul>
+    </ul>  
 
-    
-    
   </section>
   )
 }

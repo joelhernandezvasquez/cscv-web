@@ -1,5 +1,5 @@
-'use client';
-import ReactPlayer from 'react-player'
+// 'use client';
+//mport ReactPlayer from 'react-player';
 
 interface Props{
   width:string,
@@ -10,12 +10,13 @@ interface Props{
 const Video = ({width,height,url}:Props) => {
 
   return (
-    <ReactPlayer url={url}
+    <video
     controls
     width={`${width}`}
     height={`${height}`}
-    style={{margin:'0 auto'}}
-    />
+    style={{margin:'0 auto'}}>
+      <source src={url} type="video/mp4"/>
+    </video>
   )
 }
 

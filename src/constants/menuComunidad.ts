@@ -7,7 +7,7 @@ export const menuComunidad = [
     {
         id:'historia-002',
         item:'Historia',
-        link:'/construction'
+        link:'/historia'
     },
     {
         id:'carisma-003',

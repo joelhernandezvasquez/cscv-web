@@ -1,3 +1,7 @@
+.wrapper{
+   display:grid;
+   grid-template-columns: 1fr;
+}
 
 .course_container{
  padding:2rem 1rem;
@@ -55,14 +59,16 @@
     border-radius: .5rem;
  }
 
- .what_learn_items{
+  .what_learn_items li{
     display:flex;
     align-items: center;
     gap:.5rem;
     margin:.5rem 0;
     font-size: 1rem;
+    color:var(--black_text_clr);
  }
- .what_learn_items span{
+ .what_learn_items li::before{
+   content:'✓';
    color:var(--brand_red_clr);
  }
 
@@ -120,6 +126,12 @@
 }
 
 @media(min-width:767px){
+
+   .wrapper{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:2.5rem;
+   }
    .course_container{
       padding:2rem;
    }
@@ -131,8 +143,9 @@
      font-size: 1.2rem;
       max-width:fit-content;
    }
-   .what_learn_items{
+   .what_learn_items li{
       font-size: 1.125rem;
+      gap:1rem;
    }
 
    .video{
