@@ -10,7 +10,7 @@ interface Props {
     event:Events
 }
 export const EventCard = ({event}:Props) => {
-    const {name,graphicUrl,description,price,requisitos,location,eventDates} = event;
+    const {name,graphicUrl,description,price,requisitos,location,eventDates,slug} = event;
 
     return (
     <li className={style.event_card}>
@@ -44,7 +44,7 @@ export const EventCard = ({event}:Props) => {
             <p className={leadText.className}>Location:{location}</p>
           </div>
         
-          <Link className={`${'btn_cta'} ${titleHeadline.className}`} href={'/'}>Ver Detalles</Link>
+          <Link className={`${'btn_cta'} ${titleHeadline.className}`} href={`course/${slug}`}>Ver Detalles</Link>
       </div>  
     </li>
   )
