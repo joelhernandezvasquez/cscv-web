@@ -17,7 +17,7 @@
 }
 
 .teaser{
-    font-size: 1.125rem; 
+    font-size: 1.2rem; 
  }
  .course_upfront_info{
     display:flex;
@@ -49,7 +49,7 @@
   display:flex;
   flex-direction: column;
   gap:.5rem;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
  }
 
  .what_learn{
@@ -64,7 +64,7 @@
     align-items: center;
     gap:.5rem;
     margin:.5rem 0;
-    font-size: 1rem;
+    font-size: 1.125rem;
     color:var(--black_text_clr);
  }
  .what_learn_items li::before{
@@ -126,9 +126,7 @@
 }
 
 @media(min-width:767px){
-
    .wrapper{
-      display:grid;
       grid-template-columns: 1fr auto;
       gap:2.5rem;
    }
@@ -144,7 +142,6 @@
       max-width:fit-content;
    }
    .what_learn_items li{
-      font-size: 1.125rem;
       gap:1rem;
    }
 

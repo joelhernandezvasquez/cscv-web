@@ -14,6 +14,7 @@ const Video = ({width,height,url}:Props) => {
     controls
     width={`${width}`}
     height={`${height}`}
+    preload="auto"
     style={{margin:'0 auto'}}>
       <source src={url} type="video/mp4"/>
     </video>

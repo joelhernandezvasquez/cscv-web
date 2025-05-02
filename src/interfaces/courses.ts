@@ -31,4 +31,5 @@ export interface Course {
     whatLearn:WhatLearnNode
     promocional_video: { url: string }[]
      promocional_video_Url:string,
+     contactNumber:string
   }
