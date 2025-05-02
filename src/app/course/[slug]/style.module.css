@@ -1,0 +1,153 @@
+.wrapper{
+   display:grid;
+   grid-template-columns: 1fr;
+}
+
+.course_container{
+ padding:2rem 1rem;
+}
+
+.banner{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    background:#c23b2a;
+    min-height: 300px;
+    color:var(--neutral_clr);
+}
+
+.teaser{
+    font-size: 1.2rem; 
+ }
+ .course_upfront_info{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    padding-bottom: 1.5rem;
+ }
+
+ .item_info{
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    max-width: 300px;
+ }
+ .item_info svg{
+    min-width: 25px;
+ }
+
+ .price_badge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9c2826;
+    padding: .5rem 1.5em;
+    border-radius: 50px;
+ }
+
+ .course_description{
+  display:flex;
+  flex-direction: column;
+  gap:.5rem;
+  font-size: 1.2rem;
+ }
+
+ .what_learn{
+    padding:1rem;
+    margin-top:1rem;
+    box-shadow: 11px 10px 40px 32px rgba(0,0,0,0.1); 
+    border-radius: .5rem;
+ }
+
+  .what_learn_items li{
+    display:flex;
+    align-items: center;
+    gap:.5rem;
+    margin:.5rem 0;
+    font-size: 1.125rem;
+    color:var(--black_text_clr);
+ }
+ .what_learn_items li::before{
+   content:'✓';
+   color:var(--brand_red_clr);
+ }
+
+ .more_info {
+  display:flex;
+  flex-direction: column;
+  gap:1.5rem;
+  margin:1rem 0;
+ }
+ .more_info a{
+   text-decoration: underline;
+ }
+ .more_info li{
+   list-style-type: disc;
+   list-style-position: inside;
+   margin:.5rem 0;
+ }
+
+ .more_info li:last-child{
+   margin-bottom: 0;
+ }
+ .more_info ul{
+   padding:.5rem 1rem;
+ }
+ 
+.heading{
+   text-align: center;
+   margin:1rem 0;
+}
+
+.event_list{
+   display:grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,390px)) ;
+   gap:1rem;
+   padding:var(--spacing);
+ }
+ 
+ @media(min-width:767px){
+   .event_list{
+     justify-content: center;
+     gap:2rem;
+   }
+ 
+ }
+.header_image{
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 11px 10px 40px 32px rgba(0,0,0,0.1); 
+    border-radius: .5rem;
+}
+
+.video{
+   margin:1.5rem 0;
+}
+
+@media(min-width:767px){
+   .wrapper{
+      grid-template-columns: 1fr auto;
+      gap:2.5rem;
+   }
+   .course_container{
+      padding:2rem;
+   }
+   .teaser{
+      font-size: 1.5rem; 
+   }
+
+   .item_info{
+     font-size: 1.2rem;
+      max-width:fit-content;
+   }
+   .what_learn_items li{
+      gap:1rem;
+   }
+
+   .video{
+      display:none;
+   }
+   
+}
+

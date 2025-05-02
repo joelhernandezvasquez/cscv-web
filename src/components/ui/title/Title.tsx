@@ -3,7 +3,7 @@ import style from './style.module.css';
 
 interface Props{
     title:string,
-    size:'xs'|'sm' | 'md' | 'lg'| 'xl'
+    size:'xs'|'sm' | 'md' | 'lg'| 'xl' |'xxl'
     color?:'black' | 'red' | 'white',
     className?:string
 }
