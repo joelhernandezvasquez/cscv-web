@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import { Title } from "../title/Title";
 import { Events } from "@/interfaces/events";
-import { leadText, titleHeadline } from "@/config/font.plugin";
+import { leadText} from "@/config/font.plugin";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import style from './style.module.css';
+import EventCardLink from "./EventCardLink";
 
 interface Props {
     event:Events
@@ -12,6 +12,7 @@ interface Props {
 export const EventCard = ({event}:Props) => {
     const {name,graphicUrl,description,price,requisitos,location,eventDates,slug} = event;
 
+     
     return (
     <li className={style.event_card}>
       <header>
@@ -43,8 +44,7 @@ export const EventCard = ({event}:Props) => {
           <div className={style.event_location}>
             <p className={leadText.className}>Location:{location}</p>
           </div>
-        
-          <Link className={`${'btn_cta'} ${titleHeadline.className}`} href={`course/${slug}`}>Ver Detalles</Link>
+        <EventCardLink slug={slug}/>
       </div>  
     </li>
   )
