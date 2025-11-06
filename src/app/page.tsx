@@ -8,15 +8,16 @@ import Ministries from "@/components/ui/ministries/Ministries";
 //import FeatureAnnouncements from "@/components/announcements/FeatureAnnouncements";
 import Media from "@/components/media/Media";
 import styles from "./page.module.css";
+import FeatureAnnouncements from "@/components/announcements/FeatureAnnouncements";
 
 export default async function Home() {
-   const {title,description,image,about,events,ministerios} = await getHomeInfo();
+   const {title,description,image,about,events,ministerios,anuncios} = await getHomeInfo();
 
    return (
       <main className={styles.main}>
          <Hero title={title} description={description} image={image}/>
          <AboutUs about={about}/>
-         {/* <FeatureAnnouncements anuncios={anuncios}/> */}
+         <FeatureAnnouncements anuncios={anuncios}/>
          <EventList events={events}/>
          <Ministries ministerios={ministerios}/>
          <Media/>
