@@ -23,7 +23,8 @@ const FeatureAnnouncements = async({anuncios}:Props) => {
             <BlocksRenderer content={description}/>
           </div>
 
-          <img className={style.image_marketing} src='/images/celebration2026.jpg' alt=""/>
+          <img className={style.image_marketing} src='/images/triduo26.jpg' alt=""/>
+
 
           {/* <video className={style.video} width="100%" height="360" controls autoPlay>
             <source src={announcements[0].url} type="video/mp4"/>
