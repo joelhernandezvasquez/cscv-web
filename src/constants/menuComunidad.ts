@@ -17,6 +17,6 @@ export const menuComunidad = [
     {
         id:'fundadores-004',
         item:'Fundadores',
-        link:'/construction'
+        link:'/fundadores'
     }
 ]
