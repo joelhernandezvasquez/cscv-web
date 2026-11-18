@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T00:00:00Z",
+  "title": "Design System: CSCV Brooklyn",
+  "extensions": {
+    "colorMeta": {
+      "red": {
+        "role": "primary",
+        "displayName": "Candle Red",
+        "canonical": "#c8161d",
+        "tonalRamp": [
+          "#46070a",
+          "#6e0c0f",
+          "#961015",
+          "#b4131a",
+          "#c8161d",
+          "#d85b60",
+          "#e69699",
+          "#f4d0d1"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Altar Gold",
+        "canonical": "#f5b335",
+        "tonalRamp": [
+          "#553e12",
+          "#86621d",
+          "#b78627",
+          "#dca12f",
+          "#f5b335",
+          "#f8c971",
+          "#fadca4",
+          "#fdefd6"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Ink",
+        "canonical": "#2a2523",
+        "tonalRamp": [
+          "#0e0c0c",
+          "#171413",
+          "#1f1b1a",
+          "#25211f",
+          "#2a2523",
+          "#696665",
+          "#9f9c9c",
+          "#d4d3d3"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "#f5eee6",
+        "tonalRamp": [
+          "#555350",
+          "#86827e",
+          "#b7b2ac",
+          "#dcd6cf",
+          "#f5eee6",
+          "#f8f3ed",
+          "#faf7f3",
+          "#fdfbfa"
+        ]
+      },
+      "page-bg": {
+        "role": "neutral",
+        "displayName": "Parchment",
+        "canonical": "#fbf8f4",
+        "tonalRamp": [
+          "#575655",
+          "#8a8886",
+          "#bcbab7",
+          "#e1dfdb",
+          "#fbf8f4",
+          "#fcfaf7",
+          "#fdfbfa",
+          "#fefdfc"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase card kickers."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-card",
+        "value": "transform 200ms ease-in-out",
+        "purpose": "Card lift and button fill swap."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "header-desktop",
+        "value": "960px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Red pill action; fill swaps to gold on dark.",
+      "html": "<button class=\"ds-btn-primary\">Ver detalles</button>",
+      "css": ".ds-btn-primary{background:#c8161d;color:#fff;border:0;border-radius:999px;padding:13px 26px;font:700 15px 'Hanken Grotesk',system-ui,sans-serif;cursor:pointer;transition:all 200ms ease-in-out}.ds-btn-primary:hover{background:#f5b335;color:#2a2523}.ds-btn-primary:focus-visible{outline:2px solid #2a2523;outline-offset:3px}"
+    },
+    {
+      "name": "Frosted Pill",
+      "kind": "chip",
+      "refersTo": "pill-frosted",
+      "description": "Label over photography.",
+      "html": "<div style=\"background:#2a2523;padding:20px\"><span class=\"ds-pill\">Casa de la Anunciación · Brooklyn, NY</span></div>",
+      "css": ".ds-pill{display:inline-flex;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);color:#fff;padding:8px 14px;border-radius:999px;font:600 13px 'Hanken Grotesk',system-ui,sans-serif}"
+    },
+    {
+      "name": "Event Card",
+      "kind": "card",
+      "refersTo": "event-card",
+      "description": "White hero card with image column linking to the events list.",
+      "html": "<a class=\"ds-event\" href=\"#event-list\"><div class=\"ds-event-img\"></div><div class=\"ds-event-body\"><div class=\"ds-event-kicker\">Próximo evento</div><div class=\"ds-event-title\">Curso Eliseo</div><div class=\"ds-event-dates\">19 Octubre, 8:00 AM</div><div class=\"ds-event-link\">Ver eventos →</div></div></a>",
+      "css": ".ds-event{display:grid;grid-template-columns:120px minmax(0,1fr);max-width:420px;background:#fff;color:#2a2523;border-radius:20px;overflow:hidden;text-decoration:none;font-family:'Hanken Grotesk',system-ui,sans-serif;transition:transform 200ms ease-in-out}.ds-event:hover{transform:translateY(-2px)}.ds-event-img{background:#efe7dd}.ds-event-body{display:flex;flex-direction:column;gap:6px;padding:20px}.ds-event-kicker{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#c8161d}.ds-event-title{font-size:22px;font-weight:800;letter-spacing:-.01em}.ds-event-dates{font-size:15px;color:#555a66}.ds-event-link{font-size:14px;font-weight:700;margin-top:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Open Door",
+    "overview": "The site is a threshold. A visitor, usually on a phone, arrives and sees the community's own faces first, under a dark ink wash, and the next thing to attend one tap away. It is reverent and confident: big, heavy type states who the community is without hype, and the warmth comes from real photography and from logo red and gold, not from decoration.",
+    "keyCharacteristics": [
+      "Photo-led, ink-grounded hero with a bottom gradient.",
+      "Heavy Hanken Grotesk (800) with tight negative tracking for headings.",
+      "Red is the action color, gold is its hover on dark.",
+      "Pills and 20-24px rounded cards; no shadows.",
+      "Responsive by grid wrapping, not breakpoints."
+    ],
+    "rules": [
+      {
+        "name": "The One Action Rule",
+        "body": "Red is the only action color. Gold appears as hover or kicker on dark, never as a second button color on light.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Neutral Rule",
+        "body": "Every neutral leans warm toward the logo; no cool or pure gray surfaces.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heavy and Tight Rule",
+        "body": "Headings are weight 800 with negative tracking (-0.03 to -0.035em); body never goes below 400.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Surfaces carry no shadow. Hover lifts a card 2-3px (translateY) and nothing else.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Candle Red (#c8161d) for every primary action and Warm Ink (#2a2523) for dark grounds.",
+      "Do keep headings at weight 800 with negative tracking.",
+      "Do let photos carry warmth and place white text only over the ink gradient.",
+      "Do size touch targets for thumbs: pills and generous card padding."
+    ],
+    "donts": [
+      "Don't add shadows; use borders, photos or ink sections for depth.",
+      "Don't add a donation button or call to action.",
+      "Don't introduce cool or pure gray neutrals, or a second action color.",
+      "Don't invent testimonials, numbers or other proof."
+    ]
+  }
+}
