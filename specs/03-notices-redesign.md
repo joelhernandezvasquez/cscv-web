@@ -3,7 +3,7 @@
 > **Status:** Approved
 > **Depends on:** SPEC 01, SPEC 02
 > **Date:** 2026-11-19
-> **Objective:** Restyle the home page notices section (`FeatureAnnouncements`) to match the Brooklyn redesign: a cream band with a red kicker, a Strapi title and intro, and a grid of static flyer cards that open the full-size image.
+> **Objective:** Restyle the home page notices section (`FeatureAnnouncements`) to match the Brooklyn redesign: a cream band with a red "Avisos importantes" kicker, the heading "Noticias y anuncios", an intro on the right, and a grid of static flyer cards that open the full-size image.
 
 ## Why this spec exists
 
@@ -16,9 +16,9 @@ The homepage is being redesigned section by section. SPEC 01 did the hero and SP
 - Rewrite `src/components/announcements/FeatureAnnouncements.tsx` and `src/components/announcements/style.module.css` in place, keeping the same file names and the default export.
   - Section: `id="avisos"`, background cream `#f5eee6`, full width.
   - Inner container: `max-width: 1280px`, `margin: 0 auto`, padding `80px 24px`.
-  - Head row: flex, `justify-content: space-between`, `align-items: end`, gap 20px, wraps, margin-bottom 32px.
-    - Left: red kicker pill reading "Avisos importantes" (hardcoded): background `#c8161d`, white text, padding `6px 12px`, radius 999px, 13px/700, margin-bottom 16px. Below it an H2 from Strapi `anuncios.title`: `clamp(36px, 4.4vw, 60px)`/800, letter-spacing -0.03em, line-height 1, ink `#2a2523`.
-    - Right: intro from Strapi `anuncios.description` (blocks via `BlocksRenderer`), 17px, line-height 1.55, `#555a66`, max-width 420px, left-aligned.
+  - Head row: flex, `justify-content: space-between`, `align-items: flex-end`, gap 20px, wraps, margin-bottom 32px.
+    - Left: red kicker pill reading "Avisos importantes" (hardcoded): background `#c8161d`, white text, padding `6px 12px`, radius 999px, 13px/700, margin-bottom 16px. Below it an H2 reading "Noticias y anuncios" (hardcoded): `clamp(36px, 4.4vw, 60px)`/800, letter-spacing -0.03em, line-height 1, ink `#2a2523`.
+    - Right: intro paragraph (hardcoded): "Mantente informado sobre eventos, actualizaciones y recursos destacados para apoyar tu crecimiento espiritual y comunitario." 17px, line-height 1.55, `#555a66`, max-width 420px, left-aligned.
   - Grid: `repeat(auto-fit, minmax(min(100%, 340px), 1fr))`, gap 20px.
   - Card: `<a>` with `href` = the flyer `src`, `target="_blank"` and `rel="noopener noreferrer"`. White background, 1px border `#ebe2d7`, radius 20px, `overflow: hidden`, `display: block`. On hover, `transform: translateY(-3px)` with a 0.2s transition, disabled under `prefers-reduced-motion`.
   - Image: plain `<img>` at natural height (`width: 100%; height: auto; display: block`) with `loading="lazy"`, keeping the existing `eslint-disable @next/next/no-img-element`.
@@ -26,8 +26,9 @@ The homepage is being redesigned section by section. SPEC 01 did the hero and SP
 - Design tokens are CSS variables scoped to the module (same approach as SPEC 01).
 - The flyers come from a new constant `src/constants/notices.ts` with a descriptive Spanish alt per flyer. It starts with today's two images in `public/images/`.
 - `scroll-margin-top` on `#avisos` uses the same values as `#event-list` in `src/components/ui/events-list/style.module.css` (117px base, 121px desktop).
-- Missing Strapi data: with no `anuncios.title` the H2 is hidden, and with an empty or missing `anuncios.description` the paragraph is hidden. The kicker and the grid always render.
+- The component no longer reads `Home.anuncios`: it takes no props, and `src/app/page.tsx` stops passing `anuncios`.
 - Remove the old red gradient, the `Title` component usage, the centered text, the `leadText` font and the dead video/overlay CSS from this section.
+- In `src/app/page.tsx`, render `<FeatureAnnouncements/>` directly after `<Hero/>`, and hide `<AboutUs/>` by commenting out its import and its JSX line (the same way `Testimonials` is handled there). `about` is no longer destructured from `getHomeInfo()`.
 
 **Out of scope (for future specs):**
 
@@ -38,6 +39,8 @@ The homepage is being redesigned section by section. SPEC 01 did the hero and SP
 - A menu entry pointing to `#avisos`.
 - Moving the component to `src/components/home/`.
 - Expiry or date filtering of notices.
+- Deleting the `AboutUs` component (`src/components/home/about-us/`) or removing `about` from `getHomeInfo()` and `HomeInfo`. It is only hidden, so it can come back.
+- Reordering any other home section.
 
 ## Data model
 
@@ -63,21 +66,20 @@ export const NOTICES: Notice[] = [
 ];
 ```
 
-Order in the array is the display order. The component's props are unchanged: `{ anuncios: Block }` from `getHomeInfo()`.
+Order in the array is the display order. The component takes no props.
 
 ## Implementation plan
 
 1. Create `src/constants/notices.ts` with `Notice` and `NOTICES`. Make `FeatureAnnouncements` map over `NOTICES` instead of the two hardcoded `<img>`s, still with the old styles. Verify: the home page shows both flyers.
 2. Rewrite `style.module.css` and the JSX: section shell, cream background, container, head row (kicker, H2, intro), `heroFont`, scoped tokens and `id="avisos"` with `scroll-margin-top`. Verify at 375px and 1280px.
 3. Flyer grid and cards: link to the full image in a new tab, border, radius, hover lift, reduced-motion guard and lazy loading. Verify that clicking a card opens the image in a new tab.
-4. Missing-data guards: hide the H2 or the paragraph when Strapi lacks them. Remove the dead CSS and the `Title`/`leadText` imports. Do a responsive pass at 375, 768, 960, 1280 and 1920px, then run `npm run lint` and `npm run build`.
+4. Hardcode the head copy (kicker, H2, intro) and stop reading `Home.anuncios`. Remove the dead CSS and the `Title`/`leadText` imports. Do a responsive pass at 375, 768, 960, 1280 and 1920px, then run `npm run lint` and `npm run build`.
+5. In `src/app/page.tsx`, move `<FeatureAnnouncements/>` right after `<Hero/>` and comment out the `AboutUs` import and JSX. Verify: the home page order is Hero, Avisos, Events, Ministries, Media, and `npm run lint` and `npm run build` pass.
 
 ## Acceptance criteria
 
 - [ ] The section has `id="avisos"`, a `#f5eee6` background, and a content width of at most 1280px.
-- [ ] A red pill reading "Avisos importantes" appears above the H2.
-- [ ] The H2 text equals Strapi `Home.anuncios.title`, and the intro renders Strapi `Home.anuncios.description`.
-- [ ] With the title missing, no empty H2 is rendered. With the description empty, no empty paragraph is rendered. The kicker and the grid still show.
+- [ ] Above the flyers, the head row shows a red "Avisos importantes" pill over an H2 "Noticias y anuncios" on the left, and the intro paragraph on the right, matching the user's reference screenshot.
 - [ ] Both flyers from `NOTICES` render in array order, each with its alt text from the constant.
 - [ ] Clicking a flyer opens the full-size image in a new tab, with `rel="noopener noreferrer"`.
 - [ ] At 1280px the two flyers sit side by side. At 375px they stack in 1 column. There is no horizontal scroll at 375px.
@@ -86,14 +88,16 @@ Order in the array is the display order. The component's props are unchanged: `{
 - [ ] The section's font is Hanken Grotesk, and no other section's font or color changes.
 - [ ] Adding a third object to `NOTICES` makes a third card appear with no other code change.
 - [ ] `src/actions/get-anuncios.ts` and `src/interfaces/anuncios.ts` are unchanged.
+- [ ] On the home page, the notices section comes directly after the hero, and the About Us section does not render.
+- [ ] `src/components/home/about-us/` still exists and is only commented out in `src/app/page.tsx`.
 - [ ] `npm run lint` and `npm run build` pass with no new errors.
 
 ## Decisions
 
 - **Yes:** keep the flyers static in `src/constants/notices.ts`. It ships without a Strapi schema change. A notice is one array entry.
 - **No:** a Strapi image field (collection or `Home.anuncios`). It is the better long-term fit, but it needs CMS work outside this repo, so it goes in its own spec.
-- **Yes:** the kicker is hardcoded, while the H2 and intro come from Strapi `Home.anuncios`. Editors keep control of the copy they already manage.
-- **No:** hardcoding the design's H2 and intro copy, and no fallback copy when Strapi is empty. Missing parts are hidden instead.
+- **Yes:** hardcode the kicker, the H2 "Noticias y anuncios" and the intro (the design's copy), keeping the original head layout the user supplied in a screenshot after Step 4. No dependency on Strapi copy.
+- **No:** the Strapi `anuncios` title and description. The copy is fixed text, so editing it in Strapi has no effect.
 - **Yes:** open the full-size image in a new tab, as in the design. No JavaScript is needed.
 - **No:** a lightbox. It adds a client component, a focus trap and Escape handling for little gain.
 - **Yes:** Spanish only, `id="avisos"` with `scroll-margin-top`, and no menu item.
@@ -103,6 +107,8 @@ Order in the array is the display order. The component's props are unchanged: `{
 - **Yes:** a descriptive alt per flyer. The flyers carry the event info, and screen readers need it.
 - **No:** a generic `alt="Aviso"`.
 - **Yes:** leave `get-anuncios.ts` and `interfaces/anuncios.ts` untouched. A future Strapi spec may reuse them.
+- **Yes:** put the notices right after the hero and hide About Us by commenting it out, added to this spec after Step 4 at the user's request.
+- **No:** deleting `AboutUs` or its Strapi data. It is hidden "for now", so it must be easy to bring back.
 
 ## Risks
 
@@ -120,5 +126,6 @@ Order in the array is the display order. The component's props are unchanged: `{
 - English translation or a menu entry for `#avisos`.
 - Moving the component to `src/components/home/`.
 - Notice expiry or date filtering.
+- Deleting the About Us component or its data.
 
 Each one of those, if it lands, goes in its own spec.

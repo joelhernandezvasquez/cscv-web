@@ -50,14 +50,11 @@
 
 .notices_intro{
     max-width:420px;
+    margin:0;
     font-size:17px;
     line-height:1.55;
     color:var(--notices_body);
     text-align:left;
-}
-
-.notices_intro p{
-    margin:0;
 }
 
 .notices_grid{
