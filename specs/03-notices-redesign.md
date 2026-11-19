@@ -19,7 +19,7 @@ The homepage is being redesigned section by section. SPEC 01 did the hero and SP
   - Head row: flex, `justify-content: space-between`, `align-items: flex-end`, gap 20px, wraps, margin-bottom 32px.
     - Left: red kicker pill reading "Avisos importantes" (hardcoded): background `#c8161d`, white text, padding `6px 12px`, radius 999px, 13px/700, margin-bottom 16px. Below it an H2 reading "Noticias y anuncios" (hardcoded): `clamp(36px, 4.4vw, 60px)`/800, letter-spacing -0.03em, line-height 1, ink `#2a2523`.
     - Right: intro paragraph (hardcoded): "Mantente informado sobre eventos, actualizaciones y recursos destacados para apoyar tu crecimiento espiritual y comunitario." 17px, line-height 1.55, `#555a66`, max-width 420px, left-aligned.
-  - Grid: `repeat(auto-fit, minmax(min(100%, 340px), 1fr))`, gap 20px.
+  - Grid: `repeat(auto-fit, minmax(min(100%, 340px), 440px))` with `justify-content: center`, gap 20px. Each card is at most 440px wide and the cards are centered, so a single flyer does not fill the row (changed at the user's request: it looked too big).
   - Card: `<a>` with `href` = the flyer `src`, `target="_blank"` and `rel="noopener noreferrer"`. White background, 1px border `#ebe2d7`, radius 20px, `overflow: hidden`, `display: block`. On hover, `transform: translateY(-3px)` with a 0.2s transition, disabled under `prefers-reduced-motion`.
   - Image: plain `<img>` at natural height (`width: 100%; height: auto; display: block`) with `loading="lazy"`, keeping the existing `eslint-disable @next/next/no-img-element`.
 - Hanken Grotesk (`heroFont` from `src/config/font.plugin.ts`) applies to this section only.
@@ -114,7 +114,7 @@ Order in the array is the display order. The component takes no props.
 | `celebrando.jfif` uses a `.jfif` extension, which is a JPEG but less common. | Browsers sniff the content, so it displays. If a browser refuses it, rename it to `.jpg` and update `src`. |
 | Static flyers drift from the CMS-driven intent in the README. | Recorded as an explicit out-of-scope item for a future Strapi spec. |
 | Large flyer JPGs slow the page on mobile. | `loading="lazy"`. Converting to `next/image` stays out of this spec. |
-| A single flyer stretches full width on wide screens. | `auto-fit` with a 340px minimum makes one card fill the row, as the design does. Acceptable for now. |
+| A single flyer looks small on very wide screens. | Cards are capped at 440px and centered. Raise the cap in `.notices_grid` if needed. |
 
 ## What is **not** in this spec
 
