@@ -2,7 +2,7 @@
 import { Hero } from "@/components/home/hero/Hero";
 import { getHomeInfo } from "@/actions/get-home-info";
 import { getEventList } from "@/actions/get-events";
-import { AboutUs } from "@/components/home/about-us/AboutUs";
+// import { AboutUs } from "@/components/home/about-us/AboutUs";
 import { EventList } from "@/components/ui/events-list/EventList";
 // import Testimonials from "@/components/ui/testimonials/Testimonials";
 import Ministries from "@/components/ui/ministries/Ministries";
@@ -23,13 +23,13 @@ const getNextEvent = async () => {
 }
 
 export default async function Home() {
-   const [{title,description,image,about,events,ministerios,anuncios}, nextEvent] = await Promise.all([getHomeInfo(), getNextEvent()]);
+   const [{title,description,image,events,ministerios}, nextEvent] = await Promise.all([getHomeInfo(), getNextEvent()]);
 
    return (
       <main className={styles.main}>
          <Hero title={title} description={description} image={image} nextEvent={nextEvent}/>
-         <AboutUs about={about}/>
-         <FeatureAnnouncements anuncios={anuncios}/>
+         <FeatureAnnouncements/>
+         {/* <AboutUs about={about}/> */}
          <EventList events={events}/>
          <Ministries ministerios={ministerios}/>
          <Media/>
