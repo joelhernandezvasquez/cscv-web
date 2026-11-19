@@ -24,7 +24,7 @@ The homepage is being redesigned section by section. SPEC 01 did the hero and SP
   - Image: plain `<img>` at natural height (`width: 100%; height: auto; display: block`) with `loading="lazy"`, keeping the existing `eslint-disable @next/next/no-img-element`.
 - Hanken Grotesk (`heroFont` from `src/config/font.plugin.ts`) applies to this section only.
 - Design tokens are CSS variables scoped to the module (same approach as SPEC 01).
-- The flyers come from a new constant `src/constants/notices.ts` with a descriptive Spanish alt per flyer. It starts with today's two images in `public/images/`.
+- The flyers come from a new constant `src/constants/notices.ts` with a descriptive Spanish alt per flyer. It starts with one flyer, `public/images/celebrando.jfif` (the two May/June 2026 flyers from the first draft stay in the file as commented-out entries, at the user's request).
 - `scroll-margin-top` on `#avisos` uses the same values as `#event-list` in `src/components/ui/events-list/style.module.css` (117px base, 121px desktop).
 - The component no longer reads `Home.anuncios`: it takes no props, and `src/app/page.tsx` stops passing `anuncios`.
 - Remove the old red gradient, the `Title` component usage, the centered text, the `leadText` font and the dead video/overlay CSS from this section.
@@ -54,15 +54,11 @@ export interface Notice {
 
 export const NOTICES: Notice[] = [
   {
-    id: 'vigilia-pentecostes-2026',
-    src: '/images/PHOTO-2026-05-15-06-45-19.jpg',
-    alt: 'Gran Vigilia de Pentecostés "Nacer de Nuevo", sábado 23 de mayo de 2026, 5:00 PM a 10:00 PM, Gimnasio de San Malaquías, 220 Hendrix St, Brooklyn',
+    id: 'jesus-sana-hoy-2026',
+    src: '/images/celebrando.jfif',
+    alt: 'Celebrando 44 años de la fundación de la Comunidad Siervos de Cristo Vivo: Jesús sana hoy, predicación, sanación y eucaristía. Sábado 21 de noviembre, 3:00 PM a 9:30 PM, donación $20, Gimnasio de San Miguel, 237 Jerome Street, Brooklyn',
   },
-  {
-    id: 'veranear-con-jesus-2026',
-    src: '/images/PHOTO-2026-05-15-06-45-07.jpg',
-    alt: 'Veranear con Jesús, paseo en el barco Liberty Bell I, domingo 14 de junio de 2026, embarque 1:30 PM en Brooklyn Army Terminal, $100 por persona',
-  },
+  // Old flyers (vigilia-pentecostes-2026, veranear-con-jesus-2026) are kept as commented-out entries.
 ];
 ```
 
@@ -80,9 +76,9 @@ Order in the array is the display order. The component takes no props.
 
 - [ ] The section has `id="avisos"`, a `#f5eee6` background, and a content width of at most 1280px.
 - [ ] Above the flyers, the head row shows a red "Avisos importantes" pill over an H2 "Noticias y anuncios" on the left, and the intro paragraph on the right, matching the user's reference screenshot.
-- [ ] Both flyers from `NOTICES` render in array order, each with its alt text from the constant.
+- [ ] Every flyer in `NOTICES` renders in array order, each with its alt text from the constant. Today that is the single `celebrando.jfif` flyer.
 - [ ] Clicking a flyer opens the full-size image in a new tab, with `rel="noopener noreferrer"`.
-- [ ] At 1280px the two flyers sit side by side. At 375px they stack in 1 column. There is no horizontal scroll at 375px.
+- [ ] The flyer card is fully visible, uncropped, at 1280px and at 375px. There is no horizontal scroll at 375px.
 - [ ] Flyers display at natural height with no cropping.
 - [ ] Hovering a card lifts it 3px. With `prefers-reduced-motion: reduce` it does not move.
 - [ ] The section's font is Hanken Grotesk, and no other section's font or color changes.
@@ -114,7 +110,8 @@ Order in the array is the display order. The component takes no props.
 
 | Risk | Mitigation |
 | ---- | ---------- |
-| The flyers advertise May and June 2026 events that are already past (today is 2026-11-19). | Out of scope for code. The editor updates `NOTICES` and `public/images/`, which is one array edit. |
+| The flyer advertises an event on Saturday 21 November 2026, which will be past soon. | Out of scope for code. The editor updates `NOTICES` and `public/images/`, which is one array edit. |
+| `celebrando.jfif` uses a `.jfif` extension, which is a JPEG but less common. | Browsers sniff the content, so it displays. If a browser refuses it, rename it to `.jpg` and update `src`. |
 | Static flyers drift from the CMS-driven intent in the README. | Recorded as an explicit out-of-scope item for a future Strapi spec. |
 | Large flyer JPGs slow the page on mobile. | `loading="lazy"`. Converting to `next/image` stays out of this spec. |
 | A single flyer stretches full width on wide screens. | `auto-fit` with a 340px minimum makes one card fill the row, as the design does. Acceptable for now. |
