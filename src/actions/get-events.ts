@@ -20,7 +20,7 @@ export const getEventList = async():Promise<Events[]> =>{
 
       return response.data.map((event:Events)=>{
         const {graphic} = event;
-        const graphicUrl = IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}/${graphic.url}` : graphic.url
+        const graphicUrl = IsCurrentEnvironmentDevelopment() ? `${STRAPI_HOST}${graphic.url}` : graphic.url
 
         return{
             ...event,
