@@ -1,6 +1,13 @@
 
 .event_container{
   padding-bottom: 2rem;
+  scroll-margin-top: 117px;
+}
+
+@media (min-width: 960px){
+  .event_container{
+    scroll-margin-top: 121px;
+  }
 }
 
 .event_header{
