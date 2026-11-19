@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Block } from '@/interfaces/block';
-import { Title } from '../ui/title/Title';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-//import { getAnnouncements } from '@/actions/get-anuncios';
-import { leadText } from '@/config/font.plugin';
+import { heroFont } from '@/config/font.plugin';
+import { NOTICES } from '@/constants/notices';
 import style from './style.module.css';
 
 interface Props{
@@ -11,27 +10,38 @@ interface Props{
 }
 
 const FeatureAnnouncements = async({anuncios}:Props) => {
-  const {title,description} = anuncios;
-  //const announcements = await getAnnouncements();
+  const {title,description} = anuncios ?? {};
+  const hasDescription = Array.isArray(description) && description.length > 0;
 
   return (
-    <section className={`${style.wrapper} ${'block'}`}>
-     
-         <Title className={`${'center_text'} ${style.headline}`} title={title} size='md' color='white'/>
-          
-          <div className={`${style.description} ${leadText.className}`}>
-            <BlocksRenderer content={description}/>
+    <section id="avisos" className={`${heroFont.className} ${style.notices_section}`}>
+      <div className={style.notices_container}>
+        <div className={style.notices_head}>
+          <div>
+            <div className={style.notices_kicker}>Avisos importantes</div>
+            {title && <h2 className={style.notices_title}>{title}</h2>}
           </div>
+          {hasDescription && (
+            <div className={style.notices_intro}>
+              <BlocksRenderer content={description}/>
+            </div>
+          )}
+        </div>
 
-          <img className={style.image_marketing} src='/images/PHOTO-2026-05-15-06-45-19.jpg' alt=""/>
-         
-         <img className={style.image_marketing} src='/images/PHOTO-2026-05-15-06-45-07.jpg' alt=""/>
-
-          {/* <video className={style.video} width="100%" height="360" controls autoPlay>
-            <source src={announcements[0].url} type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video> */}
-
+        <div className={style.notices_grid}>
+          {NOTICES.map(({id, src, alt}) => (
+            <a
+              key={id}
+              className={style.notice_card}
+              href={src}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img className={style.notice_image} src={src} alt={alt} loading="lazy"/>
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }
