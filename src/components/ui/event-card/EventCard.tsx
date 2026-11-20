@@ -35,7 +35,7 @@ export const EventCard = ({event}:Props) => {
         <p className={style.event_card_description}>{description}</p>
 
         <div className={style.event_card_meta}>
-          <div>
+          <div className={style.event_card_meta_wide}>
             <div className={style.event_card_meta_label}>Cuándo</div>
             <div className={`${style.event_card_meta_value} ${style.event_card_when}`}>
               <BlocksRenderer content={eventDates}/>

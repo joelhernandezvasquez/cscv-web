@@ -41,13 +41,32 @@
   color:var(--events_body);
 }
 
+/* Flex instead of grid so cards stay centered and capped at 440px,
+   while 3 events always sit on one row at desktop widths. */
 .event_list{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
   gap:24px;
   margin:0;
   padding:0;
   list-style:none;
+}
+
+.event_list > *{
+  width:min(100%, 440px);
+}
+
+@media (min-width: 740px){
+  .event_list > *{
+    width:min(440px, calc((100% - 24px) / 2));
+  }
+}
+
+@media (min-width: 960px){
+  .event_list > *{
+    width:min(440px, calc((100% - 48px) / 3));
+  }
 }
 
 @media (min-width: 960px){

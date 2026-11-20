@@ -72,7 +72,7 @@
 
 .event_card_description{
     margin:0;
-    font-size:16px;
+    font-size:18px;
     line-height:1.6;
     color:var(--card_body);
     text-wrap:pretty;
@@ -85,7 +85,7 @@
     padding:16px 0;
     border-top:1px solid var(--card_divider);
     border-bottom:1px solid var(--card_divider);
-    font-size:14px;
+    font-size:16px;
 }
 
 .event_card_meta_label{
@@ -98,8 +98,18 @@
     font-weight:700;
 }
 
+/* Cuándo takes the full row so each date fits on one line. */
+.event_card_meta_wide{
+    grid-column:1 / -1;
+}
+
 .event_card_when p{
     margin:0;
+    line-height:1.5;
+}
+
+.event_card_when p + p{
+    margin-top:4px;
 }
 
 .event_card_actions{
