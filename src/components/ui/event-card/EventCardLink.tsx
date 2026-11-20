@@ -4,15 +4,16 @@ import { usePathname } from 'next/navigation';
 import { titleHeadline } from '@/config/font.plugin';
 
 interface Props{
-  slug:string
+  slug:string,
+  className?:string
 }
 
-const EventCardLink = ({slug}:Props) => {
+const EventCardLink = ({slug,className}:Props) => {
 
   const pathName = usePathname();
- 
+
   return (
-    <Link className={`${'btn_cta'} ${titleHeadline.className}`} 
+    <Link className={className ?? `${'btn_cta'} ${titleHeadline.className}`}
       href={`${!pathName.includes('course') ? `course/${slug}` : `${slug}`} `}>
       Ver Detalles
     </Link>
