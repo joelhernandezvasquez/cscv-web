@@ -23,14 +23,14 @@ const getNextEvent = async () => {
 }
 
 export default async function Home() {
-   const [{title,description,image,events,ministerios}, nextEvent] = await Promise.all([getHomeInfo(), getNextEvent()]);
+   const [{title,description,image,ministerios}, nextEvent] = await Promise.all([getHomeInfo(), getNextEvent()]);
 
    return (
       <main className={styles.main}>
          <Hero title={title} description={description} image={image} nextEvent={nextEvent}/>
          <FeatureAnnouncements/>
          {/* <AboutUs about={about}/> */}
-         <EventList events={events}/>
+         <EventList/>
          <Ministries ministerios={ministerios}/>
          <Media/>
          {/* <Testimonials testimonials={testimonies}/> */}
