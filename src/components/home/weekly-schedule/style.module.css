@@ -1,0 +1,87 @@
+.schedule_section{
+    /* design tokens (scoped to this section) */
+    --schedule_red:#c8161d;
+    --schedule_address:#ffe1d6;
+    --schedule_day:#ffd27a;
+
+    background:var(--schedule_red);
+    color:#fff;
+    scroll-margin-top:117px;
+    -webkit-font-smoothing:antialiased;
+}
+
+.schedule_container{
+    max-width:1280px;
+    margin:0 auto;
+    padding:80px 24px;
+}
+
+.schedule_head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-bottom:36px;
+}
+
+.schedule_title{
+    margin:0;
+    font-size:clamp(36px, 4.4vw, 60px);
+    font-weight:800;
+    letter-spacing:-0.03em;
+    line-height:1;
+}
+
+.schedule_address{
+    margin:0;
+    font-size:18px;
+    font-weight:600;
+    color:var(--schedule_address);
+}
+
+.schedule_grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap:12px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.schedule_day{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    min-height:170px;
+    padding:22px 20px;
+    border-radius:18px;
+    background:rgba(255, 255, 255, 0.1);
+}
+
+.schedule_day_name{
+    margin:0;
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--schedule_day);
+}
+
+.schedule_item_name{
+    font-size:20px;
+    font-weight:700;
+    line-height:1.3;
+}
+
+.schedule_item_time{
+    margin-top:3px;
+    font-size:17px;
+    color:var(--schedule_address);
+}
+
+@media (min-width: 960px){
+    .schedule_section{
+        scroll-margin-top:121px;
+    }
+}
