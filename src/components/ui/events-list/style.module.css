@@ -3,6 +3,7 @@
   --events_red:#c8161d;
   --events_ink:#2a2523;
   --events_body:#555a66;
+  --events_gap:40px;
 
   color:var(--events_ink);
   scroll-margin-top:117px;
@@ -47,7 +48,7 @@
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:24px;
+  gap:var(--events_gap);
   margin:0;
   padding:0;
   list-style:none;
@@ -59,13 +60,13 @@
 
 @media (min-width: 740px){
   .event_list > *{
-    width:min(440px, calc((100% - 24px) / 2));
+    width:min(440px, calc((100% - var(--events_gap)) / 2));
   }
 }
 
 @media (min-width: 960px){
   .event_list > *{
-    width:min(440px, calc((100% - 48px) / 3));
+    width:min(440px, calc((100% - 2 * var(--events_gap)) / 3));
   }
 }
 
