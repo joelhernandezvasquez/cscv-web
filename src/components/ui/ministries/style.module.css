@@ -44,6 +44,10 @@
   .ministries_section{
     scroll-margin-top:121px;
   }
+
+  .ministries_grid{
+    grid-template-columns:repeat(3, 1fr);
+  }
 }
 
 .ministries_grid{
@@ -114,7 +118,8 @@
 }
 
 .ministry_description{
-  font-size:14px;
+  font-size:16px;
+  font-weight:500;
   line-height:1.5;
   color:var(--ministries_desc);
 }
