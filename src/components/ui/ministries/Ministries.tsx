@@ -1,48 +1,48 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Link from "next/link";
-import { Title } from "../title/Title";
-import { Block } from "@/interfaces/block";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { getMinisterios } from "@/actions/get-ministerios";
-import { leadText, titleHeadline } from "@/config/font.plugin";
+import { MINISTRY_TIMES } from "@/constants/ministry-times";
+import { heroFont } from "@/config/font.plugin";
 import style from './style.module.css';
 
-interface Props{
-    ministerios:Block
-  }
-
-const Ministries = async({ministerios}:Props) => {
-    const {title,description} = ministerios;
+const Ministries = async() => {
     const  ministeriosList = await getMinisterios();
 
   return (
-    <section className={'block'}>
-       <Title title={title} size={'xl'} color='red' className={`${'center_text'} ${style.main_heading}`}/>
-       <div className={`${leadText.className} ${style.content}`}>
-        <BlocksRenderer content={description}/>
-       </div>
+    <section id="ministerios" className={`${heroFont.className} ${style.ministries_section}`}>
+      <div className={style.ministries_container}>
+        <div className={style.ministries_head}>
+          <h2 className={style.ministries_title}>Ministerios</h2>
+          <p className={style.ministries_intro}>
+            Espacios de servicio, evangelización y crecimiento espiritual. Glorificamos a Dios, edificamos la comunidad y compartimos Su amor.
+          </p>
+        </div>
 
-       <ul className={style.ministerios_menu}>
-        {ministeriosList.map((ministerio)=>{
-          return <li key={ministerio.id} className={style.ministerio_card}>
-                   <img
-                      className={style.ministerio_img}
-                      width={'100%'}
-                      height={'100%'}
-                      src={ministerio.urlImage}
-                      alt={''}
-                   />
-                      <div className={style.ministerio_card_info}>
-                        <h3 className={`${titleHeadline.className} ${style.ministerio_card_title}`}>{ministerio.ministerio}</h3>
-                        <div className={`${style.ministerio_description} ${leadText.className}`}>
-                          <BlocksRenderer content={ministerio.description}/>
-                        </div>
-                        <Link className={`${titleHeadline.className} ${style.ministerio_card_link}`} href={'/'}>Read More</Link>
-                      </div>
-                   </li>
-        })}
-       </ul>
+        <ul className={style.ministries_grid}>
+          {ministeriosList.map((ministerio)=>{
+            const time = MINISTRY_TIMES[ministerio.slug];
+            return (
+            <li key={ministerio.id} className={style.ministry_card}>
+              <img
+                className={style.ministry_img}
+                src={ministerio.urlImage}
+                alt={ministerio.ministerio}
+                loading="lazy"
+              />
+              <div className={style.ministry_gradient}/>
+              <div className={style.ministry_info}>
+                {time && <div className={style.ministry_time}>{time}</div>}
+                <h3 className={style.ministry_name}>{ministerio.ministerio}</h3>
+                <div className={style.ministry_description}>
+                  <BlocksRenderer content={ministerio.description}/>
+                </div>
+              </div>
+            </li>
+            );
+          })}
+        </ul>
+      </div>
     </section>
   )
 }
