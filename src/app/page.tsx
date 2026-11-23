@@ -24,7 +24,7 @@ const getNextEvent = async () => {
 }
 
 export default async function Home() {
-   const [{title,description,image,ministerios}, nextEvent] = await Promise.all([getHomeInfo(), getNextEvent()]);
+   const [{title,description,image}, nextEvent] = await Promise.all([getHomeInfo(), getNextEvent()]);
 
    return (
       <main className={styles.main}>
@@ -33,7 +33,7 @@ export default async function Home() {
          {/* <AboutUs about={about}/> */}
          <EventList/>
          <WeeklySchedule/>
-         <Ministries ministerios={ministerios}/>
+         <Ministries/>
          <Media/>
          {/* <Testimonials testimonials={testimonies}/> */}
       </main>
