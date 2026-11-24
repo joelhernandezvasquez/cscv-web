@@ -9,7 +9,6 @@ import { EventList } from "@/components/ui/events-list/EventList";
 import Ministries from "@/components/ui/ministries/Ministries";
 //import FeatureAnnouncements from "@/components/announcements/FeatureAnnouncements";
 import { WeeklySchedule } from "@/components/home/weekly-schedule/WeeklySchedule";
-import Media from "@/components/media/Media";
 import styles from "./page.module.css";
 import FeatureAnnouncements from "@/components/announcements/FeatureAnnouncements";
 
@@ -36,7 +35,6 @@ export default async function Home() {
          <Ministries/>
          <AboutUs/>
          <RecentEvent/>
-         <Media/>
          {/* <Testimonials testimonials={testimonies}/> */}
       </main>
   );
