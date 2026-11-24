@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/hero/Hero";
 import { getHomeInfo } from "@/actions/get-home-info";
 import { getEventList } from "@/actions/get-events";
 import { AboutUs } from "@/components/home/about-us/AboutUs";
+import { RecentEvent } from "@/components/home/recent-event/RecentEvent";
 import { EventList } from "@/components/ui/events-list/EventList";
 // import Testimonials from "@/components/ui/testimonials/Testimonials";
 import Ministries from "@/components/ui/ministries/Ministries";
@@ -34,6 +35,7 @@ export default async function Home() {
          <WeeklySchedule/>
          <Ministries/>
          <AboutUs/>
+         <RecentEvent/>
          <Media/>
          {/* <Testimonials testimonials={testimonies}/> */}
       </main>
