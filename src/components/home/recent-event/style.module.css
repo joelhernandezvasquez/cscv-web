@@ -83,6 +83,12 @@
   gap:10px;
 }
 
+@media (max-width:599px){
+  .recent_gallery{
+    grid-template-columns:1fr;
+  }
+}
+
 .recent_image{
   display:block;
   width:100%;
