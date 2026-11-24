@@ -2,7 +2,7 @@
 import { Hero } from "@/components/home/hero/Hero";
 import { getHomeInfo } from "@/actions/get-home-info";
 import { getEventList } from "@/actions/get-events";
-// import { AboutUs } from "@/components/home/about-us/AboutUs";
+import { AboutUs } from "@/components/home/about-us/AboutUs";
 import { EventList } from "@/components/ui/events-list/EventList";
 // import Testimonials from "@/components/ui/testimonials/Testimonials";
 import Ministries from "@/components/ui/ministries/Ministries";
@@ -30,10 +30,10 @@ export default async function Home() {
       <main className={styles.main}>
          <Hero title={title} description={description} image={image} nextEvent={nextEvent}/>
          <FeatureAnnouncements/>
-         {/* <AboutUs about={about}/> */}
          <EventList/>
          <WeeklySchedule/>
          <Ministries/>
+         <AboutUs/>
          <Media/>
          {/* <Testimonials testimonials={testimonies}/> */}
       </main>
