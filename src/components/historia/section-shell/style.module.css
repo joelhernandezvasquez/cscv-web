@@ -1,0 +1,48 @@
+.shell_section{
+  /* design tokens (scoped to this section) */
+  --historia_ink:#2a2523;
+  --historia_red:#c8161d;
+
+  max-width:1280px;
+  margin:0 auto;
+  padding:clamp(64px, 8vw, 96px) 24px 0;
+  color:var(--historia_ink);
+  -webkit-font-smoothing:antialiased;
+}
+
+.shell_row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:28px 48px;
+}
+
+.shell_label{
+  display:flex;
+  flex:1 1 220px;
+  flex-direction:column;
+  gap:10px;
+  align-self:start;
+  padding-top:18px;
+  border-top:2px solid var(--historia_red);
+}
+
+.shell_number{
+  font-size:20px;
+  font-weight:800;
+  color:var(--historia_red);
+}
+
+.shell_name{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+}
+
+.shell_content{
+  display:flex;
+  flex:999 1 min(100%, 560px);
+  flex-direction:column;
+  gap:26px;
+  min-width:0;
+}

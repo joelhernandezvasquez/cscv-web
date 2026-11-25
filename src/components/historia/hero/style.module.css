@@ -1,0 +1,128 @@
+.hero_section{
+  /* design tokens (scoped to this section) */
+  --historia_ink:#2a2523;
+  --historia_red:#c8161d;
+  --historia_gold:#f5b335;
+  --historia_on_dark:#e9eaee;
+
+  color:var(--historia_ink);
+  -webkit-font-smoothing:antialiased;
+}
+
+.hero_container{
+  max-width:1280px;
+  margin:0 auto;
+  padding:clamp(48px, 8vw, 88px) 24px 0;
+  text-align:center;
+}
+
+.hero_crumbs{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--historia_ink);
+}
+
+.hero_crumbs a{
+  color:var(--historia_ink);
+}
+
+.hero_crumbs a:hover{
+  color:var(--historia_red);
+}
+
+.hero_crumb_current{
+  color:var(--historia_red);
+}
+
+.hero_title{
+  margin:22px 0 0;
+  font-size:clamp(44px, 7vw, 96px);
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:1;
+  text-wrap:balance;
+}
+
+.hero_subtitle{
+  margin:18px 0 0;
+  font-size:clamp(20px, 2.2vw, 26px);
+  font-weight:700;
+  letter-spacing:-0.01em;
+  color:var(--historia_red);
+}
+
+.hero_media{
+  margin-top:56px;
+}
+
+.hero_image{
+  display:block;
+  width:100%;
+  height:clamp(320px, 46vw, 560px);
+  object-fit:cover;
+  border-radius:28px 28px 0 0;
+  background:var(--historia_ink);
+}
+
+.hero_facts{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  margin:0;
+  padding:0;
+  list-style:none;
+  text-align:left;
+  background:var(--historia_ink);
+  border-radius:0 0 28px 28px;
+  overflow:hidden;
+}
+
+.hero_fact{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding:24px 20px;
+  border-top:1px solid rgba(255, 255, 255, .08);
+}
+
+.hero_fact:nth-child(even){
+  border-left:1px solid rgba(255, 255, 255, .08);
+}
+
+.hero_fact:nth-child(-n+2){
+  border-top:0;
+}
+
+@media (min-width:960px){
+  .hero_facts{
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+  }
+
+  .hero_fact{
+    padding:28px 30px;
+    border-top:0;
+    border-left:1px solid rgba(255, 255, 255, .08);
+  }
+
+  .hero_fact:first-child{
+    border-left:0;
+  }
+}
+
+.hero_fact_value{
+  font-size:clamp(30px, 8vw, 42px);
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1;
+  white-space:nowrap;
+  color:var(--historia_gold);
+}
+
+.hero_fact_label{
+  font-size:13px;
+  line-height:1.4;
+  color:var(--historia_on_dark);
+}

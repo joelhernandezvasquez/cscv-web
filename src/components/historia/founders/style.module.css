@@ -1,0 +1,69 @@
+.founders_lead,
+.founders_body,
+.founders_us{
+  --historia_ink:#2a2523;
+  --historia_red:#c8161d;
+  --historia_body:#555a66;
+  --historia_line:#e3d8cb;
+}
+
+.founders_lead{
+  margin:0;
+  font-size:clamp(22px, 2.2vw, 28px);
+  font-weight:700;
+  letter-spacing:-0.01em;
+  line-height:1.35;
+  color:var(--historia_ink);
+  text-wrap:pretty;
+}
+
+.founders_body{
+  max-width:680px;
+  margin:0;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--historia_body);
+}
+
+.founders_us{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:12px;
+  padding-top:28px;
+  border-top:1px solid var(--historia_line);
+}
+
+.founders_us_title{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--historia_red);
+}
+
+.founders_cities{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 24px;
+  margin:0;
+  padding:0;
+  list-style:none;
+  font-size:clamp(22px, 3vw, 28px);
+  letter-spacing:-0.01em;
+}
+
+.founders_city{
+  font-weight:700;
+  color:var(--historia_ink);
+}
+
+.founders_city_highlight{
+  font-weight:800;
+  color:var(--historia_red);
+}
+
+.founders_us_outro{
+  font-size:15px;
+  color:var(--historia_body);
+}

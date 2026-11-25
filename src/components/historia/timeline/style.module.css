@@ -1,0 +1,53 @@
+.timeline_list{
+  --historia_red:#c8161d;
+  --historia_body:#555a66;
+  --historia_line:#e3d8cb;
+
+  display:flex;
+  flex-direction:column;
+  margin:0 0 0 8px;
+  padding:0;
+  list-style:none;
+  border-left:1px solid var(--historia_line);
+}
+
+.timeline_item{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:0 0 48px 40px;
+}
+
+.timeline_item:last-child{
+  padding-bottom:0;
+}
+
+.timeline_marker{
+  position:absolute;
+  top:12px;
+  left:-8px;
+  width:15px;
+  height:15px;
+  box-sizing:border-box;
+  background:#fff;
+  border:3px solid var(--historia_red);
+  border-radius:999px;
+}
+
+.timeline_date{
+  font-size:clamp(32px, 3.6vw, 48px);
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:1.05;
+  color:var(--historia_red);
+}
+
+.timeline_text{
+  max-width:620px;
+  margin:0;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--historia_body);
+  text-wrap:pretty;
+}

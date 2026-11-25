@@ -1,0 +1,72 @@
+.brooklyn_section{
+  /* design tokens (scoped to this section) */
+  --historia_ink:#2a2523;
+  --historia_red:#c8161d;
+  --historia_body:#555a66;
+
+  max-width:1280px;
+  margin:0 auto;
+  padding:clamp(64px, 8vw, 96px) 24px 0;
+  color:var(--historia_ink);
+  -webkit-font-smoothing:antialiased;
+}
+
+.brooklyn_grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap:56px;
+  align-items:start;
+}
+
+.brooklyn_text{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.brooklyn_label{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding-top:18px;
+  border-top:2px solid var(--historia_red);
+}
+
+.brooklyn_number{
+  font-size:20px;
+  font-weight:800;
+  color:var(--historia_red);
+}
+
+.brooklyn_name{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+}
+
+.brooklyn_title{
+  margin:0;
+  font-size:clamp(36px, 4.4vw, 60px);
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:1;
+  text-wrap:balance;
+}
+
+.brooklyn_body{
+  margin:0;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--historia_body);
+  text-wrap:pretty;
+}
+
+.brooklyn_image{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:200px 200px 24px 24px;
+  background:var(--historia_ink);
+}
