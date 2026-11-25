@@ -1,0 +1,63 @@
+.vocations_intro,
+.vocations_list{
+  --historia_ink:#2a2523;
+  --historia_red:#c8161d;
+  --historia_body:#555a66;
+  --historia_line:#e3d8cb;
+}
+
+.vocations_intro{
+  max-width:720px;
+  margin:0;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--historia_body);
+  text-wrap:pretty;
+}
+
+.vocations_list{
+  display:flex;
+  flex-direction:column;
+  margin:14px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.vocations_item{
+  display:grid;
+  grid-template-columns:clamp(44px, 12vw, 80px) minmax(0, 1fr);
+  gap:clamp(14px, 3vw, 24px);
+  align-items:baseline;
+  padding:30px 0;
+  border-top:1px solid var(--historia_line);
+}
+
+.vocations_number{
+  font-size:clamp(44px, 10vw, 64px);
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:0.8;
+  color:var(--historia_red);
+}
+
+.vocations_text{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.vocations_title{
+  margin:0;
+  font-size:clamp(24px, 3vw, 28px);
+  font-weight:800;
+  letter-spacing:-0.015em;
+  line-height:1.1;
+  color:var(--historia_ink);
+}
+
+.vocations_body{
+  margin:0;
+  font-size:17px;
+  line-height:1.6;
+  color:var(--historia_body);
+}
